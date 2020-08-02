@@ -55,7 +55,7 @@ The following examples will show how to work with the library.
 
 #### <a name="parsing_json_string_section"></a>Parsing a JSON string
 
-```
+```cpp
 // include library
 #include "json_library.h"
 
@@ -100,7 +100,7 @@ int main(int, char *[]) {
 
 #### <a name="opening_changing_section"></a>Opening, changing and saving a JSON file
 
-```
+```cpp
 // include library
 #include "json_library.h"
 
@@ -174,7 +174,7 @@ int main(int, char *[]) {
 
 #### <a name="working_with_simple_section"></a>Working with simple json_variant values        
 
-```
+```cpp
 json_variant var;           // the json variant currently holds no value and is invalid
         
 std::cout << var.is_invalid_json() << std::endl;    // will print "1"
@@ -200,7 +200,7 @@ var = "string value";       // setting the json_variant to std::string
 
 Keep in mind that a `json_array` just a `typedef` for `std::vector<json_variant>` so all `std::vector` functions work on `json_array` as well.
 
-```
+```cpp
 json_variant var;                               // the json variant currently holds no value and is invalid
 
 var = json_array();                             // setting the json_variant to json_array
@@ -222,7 +222,7 @@ arr[0] = 567;                                   // overwrites "234" with "567"
 
 Keep in mind that a `json_object` just a `typedef` for `std::map<std::string, json_variant>` so all `std::map` functions work on `json_array` as well.
 
-```
+```cpp
 json_variant var;                               // the json variant currently holds no value and is invalid
 
 var = json_object();                                                                // initalizing with empty json object
@@ -254,7 +254,7 @@ Everytime a `json_variant::to_*type*()` (`to_int()`, `to_string()`, ...) gets ca
 
 ##### <a name="handling_typecast_expception_section"></a>Handling typecast a exception
 
-```
+```cpp
 json_variant var = 234;
 
 try {
@@ -269,7 +269,7 @@ catch (const std::runtime_error &e) {
 
 ##### <a name="avoid_typecast_exception_section"></a>Avoid typecast a exception
 
-```
+```cpp
 json_variant var = 234;
 
 // returns false
@@ -286,7 +286,7 @@ else {
 
 All strings in an `json_variant` and its children will be unicode escaped before being converted to a string (for example when calling `json_variant::dump()`). However only the characters " and \\ will be escaped since those are the only illegal characters in an JSON string. json_variant::unescape_string() is able unescape ASCII-characters (other escaped characters will stay escaped). 
 
-```
+```cpp
 json_variant var = R"(raw json string \u3093with \" very \ illegal / \\ \t "" characters")";
 
 std::string escaped = R"("raw json string \u005cu3093with \u005c\u0022 very \u005c illegal / \u005c\u005c \u005ct \u0022\u0022 characters\u0022")";

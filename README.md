@@ -93,7 +93,7 @@ int main(int, char *[]) {
 
     // prints "1" because the source string is valid json and was successfully parsed
     std::cout << json.is_valid_json() << std::endl; 
-     // prints "0" because the root is an object and not an array
+    // prints "0" because the root is an object and not an array
     std::cout << json.is_array() << std::endl;     
 
     if (json.is_object()) {
@@ -336,7 +336,7 @@ else {
 
 #### <a name="json_and_string_escapes_section"></a>JSON and string escapes
 
-All strings in an `json_variant` and its children will be unicode escaped before being converted to a string (for example when calling `json_variant::dump()`). However only the characters " and \\ will be escaped since those are the only illegal characters in an JSON string. json_variant::unescape_string() is able unescape ASCII-characters (other escaped characters will stay escaped). 
+All strings in a `json_variant` and its children will be unicode escaped before being converted to a string (for example when calling `json_variant::dump()`). However only the characters " and \\ will be escaped since those are the only illegal characters in a JSON string. json_variant::unescape_string() is able unescape ASCII-characters (other escaped characters will stay escaped). 
 
 ```cpp
 json_variant var = R"(raw json string \u3093with \" very \ 

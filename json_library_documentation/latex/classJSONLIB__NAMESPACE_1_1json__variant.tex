@@ -12,7 +12,12 @@ The \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} clas
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1251d2c28258eeebea991ed0b39c3e0c}{json\+\_\+null\+\_\+type} \{ {\bfseries null}
+enum \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1251d2c28258eeebea991ed0b39c3e0c}{json\+\_\+null\+\_\+type} \{ {\bfseries null}, 
+{\bfseries null}
+ \}\begin{DoxyCompactList}\small\item\em The json\+\_\+null\+\_\+type enum represents the json \char`\"{}null\char`\"{} value. This enum has to be used when assigning a null value to a \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. \end{DoxyCompactList}
+\item 
+enum \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1251d2c28258eeebea991ed0b39c3e0c}{json\+\_\+null\+\_\+type} \{ {\bfseries null}, 
+{\bfseries null}
  \}\begin{DoxyCompactList}\small\item\em The json\+\_\+null\+\_\+type enum represents the json \char`\"{}null\char`\"{} value. This enum has to be used when assigning a null value to a \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
@@ -136,6 +141,125 @@ void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_acab384801617885ba1dc3b
 bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_aef1fc1a342cc170da06e0d3eb1299aad}{operator==} (const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&other) const
 \begin{DoxyCompactList}\small\item\em Compares the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily other}. \end{DoxyCompactList}\item 
 bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a7672a255983f3142523b3680e737d021}{operator!=} (const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily other}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_aa14f1917c1d801decbdb757ce8a85c9f}\label{classJSONLIB__NAMESPACE_1_1json__variant_aa14f1917c1d801decbdb757ce8a85c9f}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_aa14f1917c1d801decbdb757ce8a85c9f}{json\+\_\+variant} (int value)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_aa1ad17b3c0951853f08485976f44e667}\label{classJSONLIB__NAMESPACE_1_1json__variant_aa1ad17b3c0951853f08485976f44e667}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_aa1ad17b3c0951853f08485976f44e667}{json\+\_\+variant} (json\+\_\+int value)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a27f996bf123dadc05dd713ea8fc261cd}\label{classJSONLIB__NAMESPACE_1_1json__variant_a27f996bf123dadc05dd713ea8fc261cd}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a27f996bf123dadc05dd713ea8fc261cd}{json\+\_\+variant} (double value)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a1a61aebb1250b17bd76f20791c0c4fb8}\label{classJSONLIB__NAMESPACE_1_1json__variant_a1a61aebb1250b17bd76f20791c0c4fb8}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1a61aebb1250b17bd76f20791c0c4fb8}{json\+\_\+variant} (bool value)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ab283c5aa0ca90e5b723e47f1d65f5228}\label{classJSONLIB__NAMESPACE_1_1json__variant_ab283c5aa0ca90e5b723e47f1d65f5228}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ab283c5aa0ca90e5b723e47f1d65f5228}{json\+\_\+variant} (const char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ab60808ea8930c45b36f4e68f56c819ad}\label{classJSONLIB__NAMESPACE_1_1json__variant_ab60808ea8930c45b36f4e68f56c819ad}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ab60808ea8930c45b36f4e68f56c819ad}{json\+\_\+variant} (const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a5efaca5168336e026a44bd897676938c}\label{classJSONLIB__NAMESPACE_1_1json__variant_a5efaca5168336e026a44bd897676938c}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a5efaca5168336e026a44bd897676938c}{json\+\_\+variant} (const json\+\_\+array \&value)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a6d0aebf735c61abb5d196ae62146379a}\label{classJSONLIB__NAMESPACE_1_1json__variant_a6d0aebf735c61abb5d196ae62146379a}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a6d0aebf735c61abb5d196ae62146379a}{json\+\_\+variant} (const json\+\_\+object \&value)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a352b3091d463326f7b772d35e4cbbe6f}\label{classJSONLIB__NAMESPACE_1_1json__variant_a352b3091d463326f7b772d35e4cbbe6f}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a352b3091d463326f7b772d35e4cbbe6f}{json\+\_\+variant} (const json\+\_\+array $\ast$value)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a4c1397a48545d2dc1a59085bb70b4a89}\label{classJSONLIB__NAMESPACE_1_1json__variant_a4c1397a48545d2dc1a59085bb70b4a89}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a4c1397a48545d2dc1a59085bb70b4a89}{json\+\_\+variant} (const json\+\_\+object $\ast$value)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a629877f8e133d0731ad96cf2972dd244}\label{classJSONLIB__NAMESPACE_1_1json__variant_a629877f8e133d0731ad96cf2972dd244}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a629877f8e133d0731ad96cf2972dd244}{json\+\_\+variant} (\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1251d2c28258eeebea991ed0b39c3e0c}{json\+\_\+variant\+::json\+\_\+null\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a37e47ee2b0ede098f9dc7194444e87e2}\label{classJSONLIB__NAMESPACE_1_1json__variant_a37e47ee2b0ede098f9dc7194444e87e2}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a37e47ee2b0ede098f9dc7194444e87e2}{json\+\_\+variant} (const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&other)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} by copying the values from {\ttfamily other}. \end{DoxyCompactList}\item 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a846c20ca7916959fcf8768f6c5bac36d}{json\+\_\+variant} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with the standard value. As long as no value is set the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} will be invalid. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_acdc3fa9fc5613701852f467e695c7e10}\label{classJSONLIB__NAMESPACE_1_1json__variant_acdc3fa9fc5613701852f467e695c7e10}} 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_acdc3fa9fc5613701852f467e695c7e10}{$\sim$json\+\_\+variant} ()
+\begin{DoxyCompactList}\small\item\em Destroys \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} and frees the internal memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a0cfce194bda4d31ad37d765a6428974a}\label{classJSONLIB__NAMESPACE_1_1json__variant_a0cfce194bda4d31ad37d765a6428974a}} 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a0cfce194bda4d31ad37d765a6428974a}{set\+\_\+value} (int value)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} internal value to {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_abb7433858e7a623644db82569bca8b40}\label{classJSONLIB__NAMESPACE_1_1json__variant_abb7433858e7a623644db82569bca8b40}} 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_abb7433858e7a623644db82569bca8b40}{set\+\_\+value} (json\+\_\+int value)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} internal value to {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_af2057f124cfd8c6ae3239a99d170e058}\label{classJSONLIB__NAMESPACE_1_1json__variant_af2057f124cfd8c6ae3239a99d170e058}} 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_af2057f124cfd8c6ae3239a99d170e058}{set\+\_\+value} (double value)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} internal value to {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ace90b706889e0e24edc8ca432cdfaa76}\label{classJSONLIB__NAMESPACE_1_1json__variant_ace90b706889e0e24edc8ca432cdfaa76}} 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ace90b706889e0e24edc8ca432cdfaa76}{set\+\_\+value} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} internal value to {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_afc80437e39ce1fe72fada5c7f0a42ac0}\label{classJSONLIB__NAMESPACE_1_1json__variant_afc80437e39ce1fe72fada5c7f0a42ac0}} 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_afc80437e39ce1fe72fada5c7f0a42ac0}{set\+\_\+value} (const char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} internal value to {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ac5d74f4fe4355b1fe0bffdd599c048b0}\label{classJSONLIB__NAMESPACE_1_1json__variant_ac5d74f4fe4355b1fe0bffdd599c048b0}} 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ac5d74f4fe4355b1fe0bffdd599c048b0}{set\+\_\+value} (const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} internal value to {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a9f36747d76e2ea25aa923681a0be6e47}\label{classJSONLIB__NAMESPACE_1_1json__variant_a9f36747d76e2ea25aa923681a0be6e47}} 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a9f36747d76e2ea25aa923681a0be6e47}{set\+\_\+value} (const json\+\_\+array \&value)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} internal value to {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a8d3063c18b72ea887c34ba0ef859299e}\label{classJSONLIB__NAMESPACE_1_1json__variant_a8d3063c18b72ea887c34ba0ef859299e}} 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a8d3063c18b72ea887c34ba0ef859299e}{set\+\_\+value} (const json\+\_\+object \&value)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} internal value to {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a7a03b67a13382beb917ea7a3d446fcd2}\label{classJSONLIB__NAMESPACE_1_1json__variant_a7a03b67a13382beb917ea7a3d446fcd2}} 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a7a03b67a13382beb917ea7a3d446fcd2}{set\+\_\+value} (\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1251d2c28258eeebea991ed0b39c3e0c}{json\+\_\+null\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} internal value to {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a75b05acb8473015edd7f21de1656b2b1}\label{classJSONLIB__NAMESPACE_1_1json__variant_a75b05acb8473015edd7f21de1656b2b1}} 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a75b05acb8473015edd7f21de1656b2b1}{set\+\_\+value} (const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&other)
+\begin{DoxyCompactList}\small\item\em Copies the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} values from {\ttfamily other}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a2d6f7d2f92f5c3bfaf9c548a783a97fb}{is\+\_\+int} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape json\+\_\+int}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a7f294ce9b078aca12e0f96df7275ff0b}{is\+\_\+double} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape double}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a99bd3f5d21800b7b1cc7af956c17d534}{is\+\_\+bool} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape bool}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ae097a22fe419dd083ff07bfebf0e8151}{is\+\_\+string} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape std\+::string}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a72349dff71a411ac24eea6d943772df7}{is\+\_\+array} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape json\+\_\+array}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a28b4156626bd9f0e344ba1704c7590f3}{is\+\_\+object} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape json\+\_\+array}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_abe8f66e81c598b6a9109a65e6844c5b5}{is\+\_\+null} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape is\+\_\+object}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a224aab2dd56e3928dd893be8b7f3367a}{is\+\_\+valid\+\_\+value} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is valid. \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} variables that hold values (null included) are valid. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ab6552a5e3de90ab1fbca078e5c245bfb}{is\+\_\+invalid\+\_\+value} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is invalid. \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} variables that hold no values are invalid (standard initialization). \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}{is\+\_\+valid\+\_\+json} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} and all its children variants are valid. This function will recursively check that the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} itself and all its children are valid json\+\_\+variants. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1a08b35da4cf3a334d32ebb81b20c08a}{is\+\_\+invalid\+\_\+json} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} or one its child variants is invalid. This function will recursively check if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} itself or one of its child variants is an invalid \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. \end{DoxyCompactList}\item 
+json\+\_\+int \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a8f30debf624e1a9d6cdc8aed8f7bda3d}{to\+\_\+int} () const
+\begin{DoxyCompactList}\small\item\em Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape json\+\_\+int}. \end{DoxyCompactList}\item 
+double \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a9a5c7a9568e052b4a38d1b6107038d7b}{to\+\_\+double} () const
+\begin{DoxyCompactList}\small\item\em Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape double}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a7a675f60b84c0f8e6ee30aba7cb0b72c}{to\+\_\+bool} () const
+\begin{DoxyCompactList}\small\item\em Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape bool}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a6bbb59173d134b69cded2d3da3a1b70f}{to\+\_\+string} () const
+\begin{DoxyCompactList}\small\item\em Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape std\+::string}. \end{DoxyCompactList}\item 
+json\+\_\+array \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a9c7e9d81370ff98393d2fd3ee00d013a}{to\+\_\+array} () const
+\begin{DoxyCompactList}\small\item\em Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape json\+\_\+array}. \end{DoxyCompactList}\item 
+json\+\_\+array \& \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_acda05aeecb0977c0b7555e5874cb61ee}{to\+\_\+array} ()
+\begin{DoxyCompactList}\small\item\em Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape json\+\_\+array}. \end{DoxyCompactList}\item 
+json\+\_\+object \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a28035668bca7e7829340fe994581564d}{to\+\_\+object} () const
+\begin{DoxyCompactList}\small\item\em Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape json\+\_\+object}. \end{DoxyCompactList}\item 
+json\+\_\+object \& \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_aacc6999a4b2da8acd01d35cd33f3c5ea}{to\+\_\+object} ()
+\begin{DoxyCompactList}\small\item\em Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape json\+\_\+object}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ae68b9cb156c2b2f9e12c7f889634b63a}{equals} (const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with another \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. Calling this function is the same as using the {\itshape ==} {\itshape operator}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a72d4a39d77b76f076354219edc6ea4a0}{dump} (int indent=4) const
+\begin{DoxyCompactList}\small\item\em Creates a string representation of the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} and its children. This may be just a simple value such as \char`\"{}null\char`\"{} or a more complex construct like \char`\"{}\{ \char`\"{}value\char`\"{}\+: \mbox{[}$\,$\mbox{]} \}\char`\"{}. The returned string will be valid json if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} and all its children are valid values. \end{DoxyCompactList}\item 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_acab384801617885ba1dc3b965a456e7e}{operator=} (const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&other)
+\begin{DoxyCompactList}\small\item\em Copies the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} values from {\ttfamily other}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_aef1fc1a342cc170da06e0d3eb1299aad}{operator==} (const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily other}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a7672a255983f3142523b3680e737d021}{operator!=} (const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&other) const
 \begin{DoxyCompactList}\small\item\em Compares the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily other}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -145,10 +269,18 @@ static \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \
 static std\+::string \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a4c2354098f97b91b5a07dbda981673cf}{escape\+\_\+string} (const std\+::string \&str)
 \begin{DoxyCompactList}\small\item\em Unicode escapes the passed string {\ttfamily str} and escapes all occurrences of {\bfseries "} and {\bfseries \textbackslash{}} to ensure {\ttfamily str} is a valid json string. The string escaping will be automatically handled when calling \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a72d4a39d77b76f076354219edc6ea4a0}{dump()}. \end{DoxyCompactList}\item 
 static std\+::string \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ab3b411443074a97949b5675676d0b136}{unescape\+\_\+string} (std\+::string str)
+\begin{DoxyCompactList}\small\item\em Unescapes all unicode occurrences in {\ttfamily str} of A\+S\+C\+I\+I-\/characters. \end{DoxyCompactList}\item 
+static \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a358a8e1485bc81dbed1594ce6c5b3552}{parse} (const std\+::string \&json\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Parses the passed std\+::string {\ttfamily json\+\_\+string} and interprets it into json\+\_\+variants. \end{DoxyCompactList}\item 
+static std\+::string \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a12b4d75511a0e52da1f1e726755fe618}{escape\+\_\+string} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Unicode escapes the passed string {\ttfamily str} and escapes all occurrences of {\bfseries "} and {\bfseries \textbackslash{}} to ensure {\ttfamily str} is a valid json string. The string escaping will be automatically handled when calling \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a72d4a39d77b76f076354219edc6ea4a0}{dump()}. \end{DoxyCompactList}\item 
+static std\+::string \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ab41402ea9062a5c4688834e734486646}{unescape\+\_\+string} (std\+::string str)
 \begin{DoxyCompactList}\small\item\em Unescapes all unicode occurrences in {\ttfamily str} of A\+S\+C\+I\+I-\/characters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
+std\+::ostream \& \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a753abbab1ca55cbb0dbb9dc9e95a4983}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&variant)
+\begin{DoxyCompactList}\small\item\em Writes a string representation of the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} {\ttfamily variant} into the std\+::ostream {\ttfamily os}. \end{DoxyCompactList}\item 
 std\+::ostream \& \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a753abbab1ca55cbb0dbb9dc9e95a4983}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&variant)
 \begin{DoxyCompactList}\small\item\em Writes a string representation of the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} {\ttfamily variant} into the std\+::ostream {\ttfamily os}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -173,7 +305,22 @@ A json file can be accurately represented by combining those \hyperlink{classJSO
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a1251d2c28258eeebea991ed0b39c3e0c}\label{classJSONLIB__NAMESPACE_1_1json__variant_a1251d2c28258eeebea991ed0b39c3e0c}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!json\+\_\+null\+\_\+type@{json\+\_\+null\+\_\+type}}
 \index{json\+\_\+null\+\_\+type@{json\+\_\+null\+\_\+type}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{json\+\_\+null\+\_\+type}{json\_null\_type}}
+\subsubsection{\texorpdfstring{json\+\_\+null\+\_\+type}{json\_null\_type}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1251d2c28258eeebea991ed0b39c3e0c}{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::json\+\_\+null\+\_\+type}}
+
+
+
+The json\+\_\+null\+\_\+type enum represents the json \char`\"{}null\char`\"{} value. This enum has to be used when assigning a null value to a \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a7a03b67a13382beb917ea7a3d446fcd2}{set\+\_\+value(json\+\_\+variant\+::json\+\_\+null\+\_\+type)} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a629877f8e133d0731ad96cf2972dd244}{json\+\_\+variant(json\+\_\+variant\+::json\+\_\+null\+\_\+type)} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a1251d2c28258eeebea991ed0b39c3e0c}\label{classJSONLIB__NAMESPACE_1_1json__variant_a1251d2c28258eeebea991ed0b39c3e0c}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!json\+\_\+null\+\_\+type@{json\+\_\+null\+\_\+type}}
+\index{json\+\_\+null\+\_\+type@{json\+\_\+null\+\_\+type}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{json\+\_\+null\+\_\+type}{json\_null\_type}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily enum \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1251d2c28258eeebea991ed0b39c3e0c}{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::json\+\_\+null\+\_\+type}}
 
 
@@ -191,7 +338,28 @@ The json\+\_\+null\+\_\+type enum represents the json \char`\"{}null\char`\"{} v
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a846c20ca7916959fcf8768f6c5bac36d}\label{classJSONLIB__NAMESPACE_1_1json__variant_a846c20ca7916959fcf8768f6c5bac36d}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!json\+\_\+variant@{json\+\_\+variant}}
 \index{json\+\_\+variant@{json\+\_\+variant}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{json\+\_\+variant()}{json\_variant()}}
+\subsubsection{\texorpdfstring{json\+\_\+variant()}{json\_variant()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::json\+\_\+variant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with the standard value. As long as no value is set the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} will be invalid. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}{is\+\_\+valid\+\_\+json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a0cfce194bda4d31ad37d765a6428974a}{set\+\_\+value()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_acab384801617885ba1dc3b965a456e7e}{operator=()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_aef1fc1a342cc170da06e0d3eb1299aad}{operator==()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_acab384801617885ba1dc3b965a456e7e}{operator=(const json\+\_\+variant \&)} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a846c20ca7916959fcf8768f6c5bac36d}\label{classJSONLIB__NAMESPACE_1_1json__variant_a846c20ca7916959fcf8768f6c5bac36d}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!json\+\_\+variant@{json\+\_\+variant}}
+\index{json\+\_\+variant@{json\+\_\+variant}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{json\+\_\+variant()}{json\_variant()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::json\+\_\+variant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -215,7 +383,28 @@ Initializes the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+v
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a72d4a39d77b76f076354219edc6ea4a0}\label{classJSONLIB__NAMESPACE_1_1json__variant_a72d4a39d77b76f076354219edc6ea4a0}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!dump@{dump}}
 \index{dump@{dump}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{dump()}{dump()}}
+\subsubsection{\texorpdfstring{dump()}{dump()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::dump (\begin{DoxyParamCaption}\item[{int}]{indent = {\ttfamily 4} }\end{DoxyParamCaption}) const}
+
+
+
+Creates a string representation of the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} and its children. This may be just a simple value such as \char`\"{}null\char`\"{} or a more complex construct like \char`\"{}\{ \char`\"{}value\char`\"{}\+: \mbox{[}$\,$\mbox{]} \}\char`\"{}. The returned string will be valid json if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} and all its children are valid values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent} & defines the spaces used for indentation. If the indent is set to 0 then no indentation and no new lines will be created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}{is\+\_\+valid\+\_\+json() const} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+A string representation of the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a72d4a39d77b76f076354219edc6ea4a0}\label{classJSONLIB__NAMESPACE_1_1json__variant_a72d4a39d77b76f076354219edc6ea4a0}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!dump@{dump}}
+\index{dump@{dump}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{dump()}{dump()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily std\+::string J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::dump (\begin{DoxyParamCaption}\item[{int}]{indent = {\ttfamily 4} }\end{DoxyParamCaption}) const}
 
 
@@ -236,7 +425,30 @@ A string representation of the \hyperlink{classJSONLIB__NAMESPACE_1_1json__varia
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ae68b9cb156c2b2f9e12c7f889634b63a}\label{classJSONLIB__NAMESPACE_1_1json__variant_ae68b9cb156c2b2f9e12c7f889634b63a}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!equals@{equals}}
 \index{equals@{equals}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{equals()}{equals()}}
+\subsubsection{\texorpdfstring{equals()}{equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::equals (\begin{DoxyParamCaption}\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Compares the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with another \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. Calling this function is the same as using the {\itshape ==} {\itshape operator}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & must be another \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_aef1fc1a342cc170da06e0d3eb1299aad}{operator==()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a7672a255983f3142523b3680e737d021}{operator!=()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the to objects are the same. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ae68b9cb156c2b2f9e12c7f889634b63a}\label{classJSONLIB__NAMESPACE_1_1json__variant_ae68b9cb156c2b2f9e12c7f889634b63a}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!equals@{equals}}
+\index{equals@{equals}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{equals()}{equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::equals (\begin{DoxyParamCaption}\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{other }\end{DoxyParamCaption}) const}
 
 
@@ -259,8 +471,32 @@ Compares the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+vari
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a4c2354098f97b91b5a07dbda981673cf}\label{classJSONLIB__NAMESPACE_1_1json__variant_a4c2354098f97b91b5a07dbda981673cf}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!escape\+\_\+string@{escape\+\_\+string}}
 \index{escape\+\_\+string@{escape\+\_\+string}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{escape\+\_\+string()}{escape\_string()}}
+\subsubsection{\texorpdfstring{escape\+\_\+string()}{escape\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily std\+::string J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::escape\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Unicode escapes the passed string {\ttfamily str} and escapes all occurrences of {\bfseries "} and {\bfseries \textbackslash{}} to ensure {\ttfamily str} is a valid json string. The string escaping will be automatically handled when calling \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a72d4a39d77b76f076354219edc6ea4a0}{dump()}. 
+
+\begin{DoxyNote}{Note}
+This function only escapes {\bfseries "} and {\bfseries \textbackslash{}} since those are the only illegal characters in a json string. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em str} & should be a simple string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ab3b411443074a97949b5675676d0b136}{unescape\+\_\+string()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The unicode escaped version of {\ttfamily str}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a12b4d75511a0e52da1f1e726755fe618}\label{classJSONLIB__NAMESPACE_1_1json__variant_a12b4d75511a0e52da1f1e726755fe618}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!escape\+\_\+string@{escape\+\_\+string}}
+\index{escape\+\_\+string@{escape\+\_\+string}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{escape\+\_\+string()}{escape\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static std\+::string J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::escape\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -283,7 +519,20 @@ The unicode escaped version of {\ttfamily str}.
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a72349dff71a411ac24eea6d943772df7}\label{classJSONLIB__NAMESPACE_1_1json__variant_a72349dff71a411ac24eea6d943772df7}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+array@{is\+\_\+array}}
 \index{is\+\_\+array@{is\+\_\+array}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{is\+\_\+array()}{is\_array()}}
+\subsubsection{\texorpdfstring{is\+\_\+array()}{is\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape json\+\_\+array}. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape json\+\_\+array}. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a72349dff71a411ac24eea6d943772df7}\label{classJSONLIB__NAMESPACE_1_1json__variant_a72349dff71a411ac24eea6d943772df7}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+array@{is\+\_\+array}}
+\index{is\+\_\+array@{is\+\_\+array}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{is\+\_\+array()}{is\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -296,7 +545,20 @@ Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+var
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a99bd3f5d21800b7b1cc7af956c17d534}\label{classJSONLIB__NAMESPACE_1_1json__variant_a99bd3f5d21800b7b1cc7af956c17d534}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+bool@{is\+\_\+bool}}
 \index{is\+\_\+bool@{is\+\_\+bool}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{is\+\_\+bool()}{is\_bool()}}
+\subsubsection{\texorpdfstring{is\+\_\+bool()}{is\_bool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape bool}. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape bool}. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a99bd3f5d21800b7b1cc7af956c17d534}\label{classJSONLIB__NAMESPACE_1_1json__variant_a99bd3f5d21800b7b1cc7af956c17d534}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+bool@{is\+\_\+bool}}
+\index{is\+\_\+bool@{is\+\_\+bool}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{is\+\_\+bool()}{is\_bool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -309,7 +571,20 @@ Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+var
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a7f294ce9b078aca12e0f96df7275ff0b}\label{classJSONLIB__NAMESPACE_1_1json__variant_a7f294ce9b078aca12e0f96df7275ff0b}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+double@{is\+\_\+double}}
 \index{is\+\_\+double@{is\+\_\+double}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{is\+\_\+double()}{is\_double()}}
+\subsubsection{\texorpdfstring{is\+\_\+double()}{is\_double()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape double}. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape double}. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a7f294ce9b078aca12e0f96df7275ff0b}\label{classJSONLIB__NAMESPACE_1_1json__variant_a7f294ce9b078aca12e0f96df7275ff0b}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+double@{is\+\_\+double}}
+\index{is\+\_\+double@{is\+\_\+double}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{is\+\_\+double()}{is\_double()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -322,7 +597,20 @@ Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+var
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a2d6f7d2f92f5c3bfaf9c548a783a97fb}\label{classJSONLIB__NAMESPACE_1_1json__variant_a2d6f7d2f92f5c3bfaf9c548a783a97fb}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+int@{is\+\_\+int}}
 \index{is\+\_\+int@{is\+\_\+int}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{is\+\_\+int()}{is\_int()}}
+\subsubsection{\texorpdfstring{is\+\_\+int()}{is\_int()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape json\+\_\+int}. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape json\+\_\+int}. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a2d6f7d2f92f5c3bfaf9c548a783a97fb}\label{classJSONLIB__NAMESPACE_1_1json__variant_a2d6f7d2f92f5c3bfaf9c548a783a97fb}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+int@{is\+\_\+int}}
+\index{is\+\_\+int@{is\+\_\+int}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{is\+\_\+int()}{is\_int()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -335,7 +623,27 @@ Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+var
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a1a08b35da4cf3a334d32ebb81b20c08a}\label{classJSONLIB__NAMESPACE_1_1json__variant_a1a08b35da4cf3a334d32ebb81b20c08a}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+invalid\+\_\+json@{is\+\_\+invalid\+\_\+json}}
 \index{is\+\_\+invalid\+\_\+json@{is\+\_\+invalid\+\_\+json}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{is\+\_\+invalid\+\_\+json()}{is\_invalid\_json()}}
+\subsubsection{\texorpdfstring{is\+\_\+invalid\+\_\+json()}{is\_invalid\_json()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+invalid\+\_\+json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} or one its child variants is invalid. This function will recursively check if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} itself or one of its child variants is an invalid \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}{is\+\_\+valid\+\_\+json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a224aab2dd56e3928dd893be8b7f3367a}{is\+\_\+valid\+\_\+value()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ab6552a5e3de90ab1fbca078e5c245bfb}{is\+\_\+invalid\+\_\+value()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} or one it\textquotesingle{}s child variants is invalid. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a1a08b35da4cf3a334d32ebb81b20c08a}\label{classJSONLIB__NAMESPACE_1_1json__variant_a1a08b35da4cf3a334d32ebb81b20c08a}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+invalid\+\_\+json@{is\+\_\+invalid\+\_\+json}}
+\index{is\+\_\+invalid\+\_\+json@{is\+\_\+invalid\+\_\+json}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{is\+\_\+invalid\+\_\+json()}{is\_invalid\_json()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+invalid\+\_\+json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -355,7 +663,30 @@ Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+var
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ab6552a5e3de90ab1fbca078e5c245bfb}\label{classJSONLIB__NAMESPACE_1_1json__variant_ab6552a5e3de90ab1fbca078e5c245bfb}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+invalid\+\_\+value@{is\+\_\+invalid\+\_\+value}}
 \index{is\+\_\+invalid\+\_\+value@{is\+\_\+invalid\+\_\+value}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{is\+\_\+invalid\+\_\+value()}{is\_invalid\_value()}}
+\subsubsection{\texorpdfstring{is\+\_\+invalid\+\_\+value()}{is\_invalid\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+invalid\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is invalid. \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} variables that hold no values are invalid (standard initialization). 
+
+\begin{DoxyNote}{Note}
+This function only checks this json\+\_\+variants values invalidity. To ensure that no child variant is invalid you should consider using \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1a08b35da4cf3a334d32ebb81b20c08a}{is\+\_\+invalid\+\_\+json()}. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a224aab2dd56e3928dd893be8b7f3367a}{is\+\_\+valid\+\_\+value()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}{is\+\_\+valid\+\_\+json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1a08b35da4cf3a334d32ebb81b20c08a}{is\+\_\+invalid\+\_\+json()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is invalid. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ab6552a5e3de90ab1fbca078e5c245bfb}\label{classJSONLIB__NAMESPACE_1_1json__variant_ab6552a5e3de90ab1fbca078e5c245bfb}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+invalid\+\_\+value@{is\+\_\+invalid\+\_\+value}}
+\index{is\+\_\+invalid\+\_\+value@{is\+\_\+invalid\+\_\+value}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{is\+\_\+invalid\+\_\+value()}{is\_invalid\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+invalid\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -378,7 +709,20 @@ This function only checks this json\+\_\+variants values invalidity. To ensure t
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_abe8f66e81c598b6a9109a65e6844c5b5}\label{classJSONLIB__NAMESPACE_1_1json__variant_abe8f66e81c598b6a9109a65e6844c5b5}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+null@{is\+\_\+null}}
 \index{is\+\_\+null@{is\+\_\+null}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{is\+\_\+null()}{is\_null()}}
+\subsubsection{\texorpdfstring{is\+\_\+null()}{is\_null()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape is\+\_\+object}. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape is\+\_\+object}. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_abe8f66e81c598b6a9109a65e6844c5b5}\label{classJSONLIB__NAMESPACE_1_1json__variant_abe8f66e81c598b6a9109a65e6844c5b5}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+null@{is\+\_\+null}}
+\index{is\+\_\+null@{is\+\_\+null}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{is\+\_\+null()}{is\_null()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -391,7 +735,20 @@ Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+var
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a28b4156626bd9f0e344ba1704c7590f3}\label{classJSONLIB__NAMESPACE_1_1json__variant_a28b4156626bd9f0e344ba1704c7590f3}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+object@{is\+\_\+object}}
 \index{is\+\_\+object@{is\+\_\+object}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{is\+\_\+object()}{is\_object()}}
+\subsubsection{\texorpdfstring{is\+\_\+object()}{is\_object()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape json\+\_\+array}. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape json\+\_\+array}. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a28b4156626bd9f0e344ba1704c7590f3}\label{classJSONLIB__NAMESPACE_1_1json__variant_a28b4156626bd9f0e344ba1704c7590f3}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+object@{is\+\_\+object}}
+\index{is\+\_\+object@{is\+\_\+object}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{is\+\_\+object()}{is\_object()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -404,7 +761,20 @@ Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+var
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ae097a22fe419dd083ff07bfebf0e8151}\label{classJSONLIB__NAMESPACE_1_1json__variant_ae097a22fe419dd083ff07bfebf0e8151}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+string@{is\+\_\+string}}
 \index{is\+\_\+string@{is\+\_\+string}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{is\+\_\+string()}{is\_string()}}
+\subsubsection{\texorpdfstring{is\+\_\+string()}{is\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape std\+::string}. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is of the type {\itshape std\+::string}. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ae097a22fe419dd083ff07bfebf0e8151}\label{classJSONLIB__NAMESPACE_1_1json__variant_ae097a22fe419dd083ff07bfebf0e8151}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+string@{is\+\_\+string}}
+\index{is\+\_\+string@{is\+\_\+string}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{is\+\_\+string()}{is\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -417,7 +787,27 @@ Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+var
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}\label{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+valid\+\_\+json@{is\+\_\+valid\+\_\+json}}
 \index{is\+\_\+valid\+\_\+json@{is\+\_\+valid\+\_\+json}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{is\+\_\+valid\+\_\+json()}{is\_valid\_json()}}
+\subsubsection{\texorpdfstring{is\+\_\+valid\+\_\+json()}{is\_valid\_json()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+valid\+\_\+json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} and all its children variants are valid. This function will recursively check that the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} itself and all its children are valid json\+\_\+variants. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1a08b35da4cf3a334d32ebb81b20c08a}{is\+\_\+invalid\+\_\+json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a224aab2dd56e3928dd893be8b7f3367a}{is\+\_\+valid\+\_\+value()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ab6552a5e3de90ab1fbca078e5c245bfb}{is\+\_\+invalid\+\_\+value()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} and all its child variants values are valid. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}\label{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+valid\+\_\+json@{is\+\_\+valid\+\_\+json}}
+\index{is\+\_\+valid\+\_\+json@{is\+\_\+valid\+\_\+json}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{is\+\_\+valid\+\_\+json()}{is\_valid\_json()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+valid\+\_\+json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -437,7 +827,30 @@ Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+var
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a224aab2dd56e3928dd893be8b7f3367a}\label{classJSONLIB__NAMESPACE_1_1json__variant_a224aab2dd56e3928dd893be8b7f3367a}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+valid\+\_\+value@{is\+\_\+valid\+\_\+value}}
 \index{is\+\_\+valid\+\_\+value@{is\+\_\+valid\+\_\+value}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{is\+\_\+valid\+\_\+value()}{is\_valid\_value()}}
+\subsubsection{\texorpdfstring{is\+\_\+valid\+\_\+value()}{is\_valid\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+valid\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is valid. \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} variables that hold values (null included) are valid. 
+
+\begin{DoxyNote}{Note}
+This function only checks this json\+\_\+variants value validity. To ensure that all child variants are valid you should consider using \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}{is\+\_\+valid\+\_\+json()}. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ab6552a5e3de90ab1fbca078e5c245bfb}{is\+\_\+invalid\+\_\+value()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}{is\+\_\+valid\+\_\+json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a1a08b35da4cf3a334d32ebb81b20c08a}{is\+\_\+invalid\+\_\+json()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is valid. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a224aab2dd56e3928dd893be8b7f3367a}\label{classJSONLIB__NAMESPACE_1_1json__variant_a224aab2dd56e3928dd893be8b7f3367a}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!is\+\_\+valid\+\_\+value@{is\+\_\+valid\+\_\+value}}
+\index{is\+\_\+valid\+\_\+value@{is\+\_\+valid\+\_\+value}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{is\+\_\+valid\+\_\+value()}{is\_valid\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::is\+\_\+valid\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -460,7 +873,30 @@ This function only checks this json\+\_\+variants value validity. To ensure that
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a7672a255983f3142523b3680e737d021}\label{classJSONLIB__NAMESPACE_1_1json__variant_a7672a255983f3142523b3680e737d021}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily other}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em variant} & has to be another \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ae68b9cb156c2b2f9e12c7f889634b63a}{equals()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_aef1fc1a342cc170da06e0d3eb1299aad}{operator==()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the to objects are unequal. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a7672a255983f3142523b3680e737d021}\label{classJSONLIB__NAMESPACE_1_1json__variant_a7672a255983f3142523b3680e737d021}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -483,7 +919,20 @@ Compares the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+vari
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_acab384801617885ba1dc3b965a456e7e}\label{classJSONLIB__NAMESPACE_1_1json__variant_acab384801617885ba1dc3b965a456e7e}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!operator=@{operator=}}
 \index{operator=@{operator=}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copies the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} values from {\ttfamily other}. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a75b05acb8473015edd7f21de1656b2b1}{set\+\_\+value(const json\+\_\+variant \&)} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_acab384801617885ba1dc3b965a456e7e}\label{classJSONLIB__NAMESPACE_1_1json__variant_acab384801617885ba1dc3b965a456e7e}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!operator=@{operator=}}
+\index{operator=@{operator=}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -496,7 +945,30 @@ Copies the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+varian
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_aef1fc1a342cc170da06e0d3eb1299aad}\label{classJSONLIB__NAMESPACE_1_1json__variant_aef1fc1a342cc170da06e0d3eb1299aad}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!operator==@{operator==}}
 \index{operator==@{operator==}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} with {\ttfamily other}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em variant} & has to be another \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ae68b9cb156c2b2f9e12c7f889634b63a}{equals()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a7672a255983f3142523b3680e737d021}{operator!=()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the to objects are equal. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_aef1fc1a342cc170da06e0d3eb1299aad}\label{classJSONLIB__NAMESPACE_1_1json__variant_aef1fc1a342cc170da06e0d3eb1299aad}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!operator==@{operator==}}
+\index{operator==@{operator==}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -519,8 +991,34 @@ Compares the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+vari
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ae9198f05ef46e3ada2a10d942e8478d0}\label{classJSONLIB__NAMESPACE_1_1json__variant_ae9198f05ef46e3ada2a10d942e8478d0}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!parse@{parse}}
 \index{parse@{parse}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{parse()}{parse()}}
+\subsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses the passed std\+::string {\ttfamily json\+\_\+string} and interprets it into json\+\_\+variants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & should be a valid json text. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__parser_a8f097c29f98ed795a92b5941c9070f8b}{json\+\_\+parser\+::parse()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}{is\+\_\+valid\+\_\+json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a224aab2dd56e3928dd893be8b7f3367a}{is\+\_\+valid\+\_\+value()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries on success\+:} valid \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} object that represents the passed string value {\ttfamily json}. ~\newline
+ {\bfseries on error\+:} an invalid \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a358a8e1485bc81dbed1594ce6c5b3552}\label{classJSONLIB__NAMESPACE_1_1json__variant_a358a8e1485bc81dbed1594ce6c5b3552}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!parse@{parse}}
+\index{parse@{parse}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -545,7 +1043,7 @@ Parses the passed std\+::string {\ttfamily json\+\_\+string} and interprets it i
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a9c7e9d81370ff98393d2fd3ee00d013a}\label{classJSONLIB__NAMESPACE_1_1json__variant_a9c7e9d81370ff98393d2fd3ee00d013a}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+array@{to\+\_\+array}}
 \index{to\+\_\+array@{to\+\_\+array}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{to\+\_\+array()}{to\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{\texorpdfstring{to\+\_\+array()}{to\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily json\+\_\+array J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -566,8 +1064,50 @@ Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a2af42a0f5c2fb4a8a74d2cae1166752a}\label{classJSONLIB__NAMESPACE_1_1json__variant_a2af42a0f5c2fb4a8a74d2cae1166752a}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+array@{to\+\_\+array}}
 \index{to\+\_\+array@{to\+\_\+array}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{to\+\_\+array()}{to\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\subsubsection{\texorpdfstring{to\+\_\+array()}{to\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily json\+\_\+array \& J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape json\+\_\+array}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value isn\textquotesingle{}t actually a {\itshape json\+\_\+array}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a72349dff71a411ac24eea6d943772df7}{is\+\_\+array() const} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\itshape json\+\_\+array} reference if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is actually a {\itshape json\+\_\+array}. Otherwise a {\itshape std\+::runtime\+\_\+error} will be thrown. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a9c7e9d81370ff98393d2fd3ee00d013a}\label{classJSONLIB__NAMESPACE_1_1json__variant_a9c7e9d81370ff98393d2fd3ee00d013a}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+array@{to\+\_\+array}}
+\index{to\+\_\+array@{to\+\_\+array}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{to\+\_\+array()}{to\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily json\+\_\+array J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape json\+\_\+array}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value isn\textquotesingle{}t actually a {\itshape json\+\_\+array}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a72349dff71a411ac24eea6d943772df7}{is\+\_\+array() const} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\itshape json\+\_\+array} copy if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is actually a {\itshape json\+\_\+array}. Otherwise a {\itshape std\+::runtime\+\_\+error} will be thrown. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_acda05aeecb0977c0b7555e5874cb61ee}\label{classJSONLIB__NAMESPACE_1_1json__variant_acda05aeecb0977c0b7555e5874cb61ee}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+array@{to\+\_\+array}}
+\index{to\+\_\+array@{to\+\_\+array}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{to\+\_\+array()}{to\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily json\+\_\+array\& J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -587,7 +1127,28 @@ Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a7a675f60b84c0f8e6ee30aba7cb0b72c}\label{classJSONLIB__NAMESPACE_1_1json__variant_a7a675f60b84c0f8e6ee30aba7cb0b72c}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+bool@{to\+\_\+bool}}
 \index{to\+\_\+bool@{to\+\_\+bool}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{to\+\_\+bool()}{to\_bool()}}
+\subsubsection{\texorpdfstring{to\+\_\+bool()}{to\_bool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape bool}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value isn\textquotesingle{}t actually a {\itshape bool}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a99bd3f5d21800b7b1cc7af956c17d534}{is\+\_\+bool() const} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\itshape bool} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is actually a {\itshape bool}. Otherwise a {\itshape std\+::runtime\+\_\+error} will be thrown. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a7a675f60b84c0f8e6ee30aba7cb0b72c}\label{classJSONLIB__NAMESPACE_1_1json__variant_a7a675f60b84c0f8e6ee30aba7cb0b72c}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+bool@{to\+\_\+bool}}
+\index{to\+\_\+bool@{to\+\_\+bool}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{to\+\_\+bool()}{to\_bool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -608,7 +1169,28 @@ Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a9a5c7a9568e052b4a38d1b6107038d7b}\label{classJSONLIB__NAMESPACE_1_1json__variant_a9a5c7a9568e052b4a38d1b6107038d7b}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+double@{to\+\_\+double}}
 \index{to\+\_\+double@{to\+\_\+double}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{to\+\_\+double()}{to\_double()}}
+\subsubsection{\texorpdfstring{to\+\_\+double()}{to\_double()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape double}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value isn\textquotesingle{}t actually a {\itshape double}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a7f294ce9b078aca12e0f96df7275ff0b}{is\+\_\+double() const} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\itshape double} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is actually a {\itshape double}. Otherwise a {\itshape std\+::runtime\+\_\+error} will be thrown. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a9a5c7a9568e052b4a38d1b6107038d7b}\label{classJSONLIB__NAMESPACE_1_1json__variant_a9a5c7a9568e052b4a38d1b6107038d7b}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+double@{to\+\_\+double}}
+\index{to\+\_\+double@{to\+\_\+double}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{to\+\_\+double()}{to\_double()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily double J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -629,7 +1211,28 @@ Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a8f30debf624e1a9d6cdc8aed8f7bda3d}\label{classJSONLIB__NAMESPACE_1_1json__variant_a8f30debf624e1a9d6cdc8aed8f7bda3d}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+int@{to\+\_\+int}}
 \index{to\+\_\+int@{to\+\_\+int}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{to\+\_\+int()}{to\_int()}}
+\subsubsection{\texorpdfstring{to\+\_\+int()}{to\_int()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily json\+\_\+int J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape json\+\_\+int}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value isn\textquotesingle{}t actually a {\itshape json\+\_\+int}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a2d6f7d2f92f5c3bfaf9c548a783a97fb}{is\+\_\+int()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\itshape json\+\_\+int} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is actually a {\itshape json\+\_\+int}. Otherwise a {\itshape std\+::runtime\+\_\+error} will be thrown. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a8f30debf624e1a9d6cdc8aed8f7bda3d}\label{classJSONLIB__NAMESPACE_1_1json__variant_a8f30debf624e1a9d6cdc8aed8f7bda3d}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+int@{to\+\_\+int}}
+\index{to\+\_\+int@{to\+\_\+int}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{to\+\_\+int()}{to\_int()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily json\+\_\+int J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -650,7 +1253,7 @@ Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a28035668bca7e7829340fe994581564d}\label{classJSONLIB__NAMESPACE_1_1json__variant_a28035668bca7e7829340fe994581564d}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+object@{to\+\_\+object}}
 \index{to\+\_\+object@{to\+\_\+object}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{to\+\_\+object()}{to\_object()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{\texorpdfstring{to\+\_\+object()}{to\_object()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily json\+\_\+object J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -671,8 +1274,50 @@ Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a05536ef12c8da052e4716087651b43ad}\label{classJSONLIB__NAMESPACE_1_1json__variant_a05536ef12c8da052e4716087651b43ad}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+object@{to\+\_\+object}}
 \index{to\+\_\+object@{to\+\_\+object}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{to\+\_\+object()}{to\_object()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\subsubsection{\texorpdfstring{to\+\_\+object()}{to\_object()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily json\+\_\+object \& J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape json\+\_\+object}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value isn\textquotesingle{}t actually a {\itshape json\+\_\+object}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a28b4156626bd9f0e344ba1704c7590f3}{is\+\_\+object() const} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\itshape json\+\_\+object} reference if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is actually a {\itshape json\+\_\+object}. Otherwise a {\itshape std\+::runtime\+\_\+error} will be thrown. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a28035668bca7e7829340fe994581564d}\label{classJSONLIB__NAMESPACE_1_1json__variant_a28035668bca7e7829340fe994581564d}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+object@{to\+\_\+object}}
+\index{to\+\_\+object@{to\+\_\+object}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{to\+\_\+object()}{to\_object()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily json\+\_\+object J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape json\+\_\+object}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value isn\textquotesingle{}t actually a {\itshape json\+\_\+object}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a28b4156626bd9f0e344ba1704c7590f3}{is\+\_\+object() const} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\itshape json\+\_\+object} copy if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is actually a {\itshape json\+\_\+object}. Otherwise a {\itshape std\+::runtime\+\_\+error} will be thrown. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_aacc6999a4b2da8acd01d35cd33f3c5ea}\label{classJSONLIB__NAMESPACE_1_1json__variant_aacc6999a4b2da8acd01d35cd33f3c5ea}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+object@{to\+\_\+object}}
+\index{to\+\_\+object@{to\+\_\+object}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{to\+\_\+object()}{to\_object()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily json\+\_\+object\& J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -692,7 +1337,28 @@ Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a6bbb59173d134b69cded2d3da3a1b70f}\label{classJSONLIB__NAMESPACE_1_1json__variant_a6bbb59173d134b69cded2d3da3a1b70f}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+string@{to\+\_\+string}}
 \index{to\+\_\+string@{to\+\_\+string}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value to {\itshape std\+::string}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value isn\textquotesingle{}t actually a {\itshape std\+::string}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_ae097a22fe419dd083ff07bfebf0e8151}{is\+\_\+string() const} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\itshape std\+::string} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} value is actually a {\itshape std\+::string}. Otherwise a {\itshape std\+::runtime\+\_\+error} will be thrown. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a6bbb59173d134b69cded2d3da3a1b70f}\label{classJSONLIB__NAMESPACE_1_1json__variant_a6bbb59173d134b69cded2d3da3a1b70f}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily std\+::string J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -713,8 +1379,34 @@ Casts the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ab3b411443074a97949b5675676d0b136}\label{classJSONLIB__NAMESPACE_1_1json__variant_ab3b411443074a97949b5675676d0b136}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!unescape\+\_\+string@{unescape\+\_\+string}}
 \index{unescape\+\_\+string@{unescape\+\_\+string}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{unescape\+\_\+string()}{unescape\_string()}}
+\subsubsection{\texorpdfstring{unescape\+\_\+string()}{unescape\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily std\+::string J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::unescape\+\_\+string (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Unescapes all unicode occurrences in {\ttfamily str} of A\+S\+C\+I\+I-\/characters. 
+
+\begin{DoxyNote}{Note}
+Non-\/\+A\+S\+C\+II characters won\textquotesingle{}t be converted to prevent an encoding mess. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em str} & should be a simple string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a4c2354098f97b91b5a07dbda981673cf}{escape\+\_\+string()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a72d4a39d77b76f076354219edc6ea4a0}{dump()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The A\+S\+C\+I\+I-\/unescaped version of {\ttfamily str}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_ab41402ea9062a5c4688834e734486646}\label{classJSONLIB__NAMESPACE_1_1json__variant_ab41402ea9062a5c4688834e734486646}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!unescape\+\_\+string@{unescape\+\_\+string}}
+\index{unescape\+\_\+string@{unescape\+\_\+string}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{unescape\+\_\+string()}{unescape\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static std\+::string J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant\+::unescape\+\_\+string (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -742,7 +1434,20 @@ The A\+S\+C\+I\+I-\/unescaped version of {\ttfamily str}.
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a753abbab1ca55cbb0dbb9dc9e95a4983}\label{classJSONLIB__NAMESPACE_1_1json__variant_a753abbab1ca55cbb0dbb9dc9e95a4983}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
-\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{variant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Writes a string representation of the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} {\ttfamily variant} into the std\+::ostream {\ttfamily os}. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a72d4a39d77b76f076354219edc6ea4a0}{dump()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__variant_a753abbab1ca55cbb0dbb9dc9e95a4983}\label{classJSONLIB__NAMESPACE_1_1json__variant_a753abbab1ca55cbb0dbb9dc9e95a4983}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+variant}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{variant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
@@ -757,4 +1462,6 @@ Writes a string representation of the \hyperlink{classJSONLIB__NAMESPACE_1_1json
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 json\+\_\+library\+\_\+source/json\+\_\+variant.\+h\item 
-json\+\_\+library\+\_\+source/json\+\_\+variant.\+cpp\end{DoxyCompactItemize}
+json\+\_\+library.\+h\item 
+json\+\_\+library\+\_\+source/json\+\_\+variant.\+cpp\item 
+json\+\_\+library.\+cpp\end{DoxyCompactItemize}

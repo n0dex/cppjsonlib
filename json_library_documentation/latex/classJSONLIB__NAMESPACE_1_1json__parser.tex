@@ -13,6 +13,8 @@ The \hyperlink{classJSONLIB__NAMESPACE_1_1json__parser}{json\+\_\+parser} class 
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \hyperlink{classJSONLIB__NAMESPACE_1_1json__parser_a8f097c29f98ed795a92b5941c9070f8b}{parse} (const std\+::string \&json\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Parses the passed std\+::string {\ttfamily json\+\_\+string} and interprets it into json\+\_\+variants. \end{DoxyCompactList}\item 
+static \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \hyperlink{classJSONLIB__NAMESPACE_1_1json__parser_a92cc0ccf4fe28eea7a588d5bb7562510}{parse} (const std\+::string \&json\+\_\+string)
 \begin{DoxyCompactList}\small\item\em Parses the passed std\+::string {\ttfamily json\+\_\+string} and interprets it into json\+\_\+variants. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -23,8 +25,34 @@ The \hyperlink{classJSONLIB__NAMESPACE_1_1json__parser}{json\+\_\+parser} class 
 \mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__parser_a8f097c29f98ed795a92b5941c9070f8b}\label{classJSONLIB__NAMESPACE_1_1json__parser_a8f097c29f98ed795a92b5941c9070f8b}} 
 \index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+parser@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+parser}!parse@{parse}}
 \index{parse@{parse}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+parser@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+parser}}
-\subsubsection{\texorpdfstring{parse()}{parse()}}
+\subsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+parser\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses the passed std\+::string {\ttfamily json\+\_\+string} and interprets it into json\+\_\+variants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & should be a valid json text. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a846c20ca7916959fcf8768f6c5bac36d}{json\+\_\+variant\+::json\+\_\+variant()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}{json\+\_\+variant\+::is\+\_\+valid\+\_\+json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a224aab2dd56e3928dd893be8b7f3367a}{json\+\_\+variant\+::is\+\_\+valid\+\_\+value()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries on success\+:} valid \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} object that represents the passed string value {\ttfamily json}. ~\newline
+ {\bfseries on error\+:} an invalid \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__parser_a92cc0ccf4fe28eea7a588d5bb7562510}\label{classJSONLIB__NAMESPACE_1_1json__parser_a92cc0ccf4fe28eea7a588d5bb7562510}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+parser@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+parser}!parse@{parse}}
+\index{parse@{parse}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+parser@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+parser}}
+\subsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+parser\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -51,4 +79,6 @@ Parses the passed std\+::string {\ttfamily json\+\_\+string} and interprets it i
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 json\+\_\+library\+\_\+source/json\+\_\+parser.\+h\item 
-json\+\_\+library\+\_\+source/json\+\_\+parser.\+cpp\end{DoxyCompactItemize}
+json\+\_\+library.\+h\item 
+json\+\_\+library\+\_\+source/json\+\_\+parser.\+cpp\item 
+json\+\_\+library.\+cpp\end{DoxyCompactItemize}

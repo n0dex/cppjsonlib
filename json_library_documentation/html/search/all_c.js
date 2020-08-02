@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unescape_5fstring',['unescape_string',['../classJSONLIB__NAMESPACE_1_1json__variant.html#ab3b411443074a97949b5675676d0b136',1,'JSONLIB_NAMESPACE::json_variant']]]
+  ['_7ejson_5fvariant',['~json_variant',['../classJSONLIB__NAMESPACE_1_1json__variant.html#acdc3fa9fc5613701852f467e695c7e10',1,'JSONLIB_NAMESPACE::json_variant::~json_variant()'],['../classJSONLIB__NAMESPACE_1_1json__variant.html#acdc3fa9fc5613701852f467e695c7e10',1,'JSONLIB_NAMESPACE::json_variant::~json_variant()']]]
 ];

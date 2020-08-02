@@ -87,7 +87,8 @@ int main(int, char *[]) {
     std::cout << json << std::endl;
     // prints the json with indent of 2    
     std::cout << json.dump(2) << std::endl;     
-    // prints the json no indent and no new lines: "{"age":22,"favourite_values":[2,null,false,{}],"name":"user"}"
+    // prints the json no indent and no new lines: 
+    // "{"age":22,"favourite_values":[2,null,false,{}],"name":"user"}"
     std::cout << json.dump(0) << std::endl;     
 
     // prints "1" because the source string is valid json and was successfully parsed

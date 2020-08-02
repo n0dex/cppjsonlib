@@ -35,19 +35,19 @@ The datatypes are:
 
 ### <a name="integration_section"></a>Integration
 
-Since the library consists only of the two files [json_library.h](GITHUB_URL_TODO) and [json_library.cpp](GITHUB_URL_TODO) you can just download them and add them into your project.
+Since the library consists only of the two files [json_library.h](https://github.com/n0dex/cppjsonlib/blob/master/json_library.h) and [json_library.cpp](https://github.com/n0dex/cppjsonlib/blob/master/json_library.cpp) you can just download them and add them into your project.
 To use the library, you should use `#include "json_library.h"` and define the namespace `using namespace json;` (recommended).
 
-If you prefer to add the files seperated by classes you can download the [json_library](GITHUB_URL_TODO) directory and include the directory into your project.  
+If you prefer to add the files seperated by classes you can download the [json_library](https://github.com/n0dex/cppjsonlib/tree/master/json_library_source) directory and include the directory into your project.  
 To use the library in this case, you should use `#include "json_library_source/json_library.h"`.
 
 ### <a name="doc_section"></a>Documentation
 
-The library is documented with doxygen. The documentation can be found [here](GITHUB_URL_TODO).
+The library is documented with doxygen. The documentation can be found [here](https://github.com/n0dex/cppjsonlib/tree/master/json_library_documentation).
 
 ### <a name="tests_section"></a>Tests
 
-The library was thoroughly tested. The test cases are written with the Qt Test Library and can be found [here](GITHUB_URL_TODO).
+The library was thoroughly tested. The test cases are written with the Qt Test Library and can be found [here](https://github.com/n0dex/cppjsonlib/tree/master/json_library_tests).
 
 ### <a name="expamles_section"></a>Examples
 
@@ -65,7 +65,11 @@ using namespace json;
 int main(int, char *[]) {
 
     // initializing a string
-    std::string string_value = "{ \"name\": \"user\", \"age\": 22, \"favourite_values\": [2, null, false, {}] }";
+    std::string string_value = "{ 
+        \"name\": \"user\", 
+        \"age\": 22, 
+        \"favourite_values\": [ 2, null, false, {}] 
+    }";
 
     // initializing a string with an easier writing - content same as above
     string_value = R"({
@@ -78,20 +82,30 @@ int main(int, char *[]) {
     json_variant json = json_variant::parse(string_value);
 
     // print json into console
-    std::cout << json << std::endl;             // prints the json with default indent of 4
-    std::cout << json.dump(2) << std::endl;     // prints the json with indent of 2
-    std::cout << json.dump(0) << std::endl;     // prints the json no indent and no new lines: "{"age":22,"favourite_values":[2,null,false,{}],"name":"user"}"
 
-    std::cout << json.is_valid_json() << std::endl; // prints "1" because the source string is valid json and was successfully parsed
-    std::cout << json.is_array() << std::endl;      // prints "0" because the root is an object and not an array
+    // prints the json with default indent of 4
+    std::cout << json << std::endl;
+    // prints the json with indent of 2    
+    std::cout << json.dump(2) << std::endl;     
+    // prints the json no indent and no new lines: "{"age":22,"favourite_values":[2,null,false,{}],"name":"user"}"
+    std::cout << json.dump(0) << std::endl;     
+
+    // prints "1" because the source string is valid json and was successfully parsed
+    std::cout << json.is_valid_json() << std::endl; 
+     // prints "0" because the root is an object and not an array
+    std::cout << json.is_array() << std::endl;     
 
     if (json.is_object()) {
-        std::cout << json.to_object()["name"].to_string() << std::endl;                 // prints "user"
+        // prints "user"
+        std::cout << json.to_object()["name"].to_string() << std::endl;                 
 
         json_object &obj = json.to_object();
-        std::cout << obj.at("favourite_values").to_array()[2].is_bool() << std::endl;   // prints "1" since the json array holds a "false" bool value in index 2
 
-        std::cout << obj.at("favourite_values").dump(0) << std::endl;                   // prints "[2,null,false,{}]"
+        // prints "1" since the json array holds a "false" bool value in index 2
+        std::cout << obj.at("favourite_values").to_array()[2].is_bool() << std::endl;   
+
+        // prints "[2,null,false,{}]"
+        std::cout << obj.at("favourite_values").dump(0) << std::endl;                  
     }
 
     return 0;
@@ -118,7 +132,8 @@ int main(int, char *[]) {
     */
     json_document doc("values.json");
 
-    if (doc.open()) { // only successfull if document contains valid json syntax and the file was found
+    // only successfull if document contains valid json syntax and the file was found
+    if (doc.open()) { 
         std::cout << doc.json() << std::endl;
         /*
         prints:
@@ -136,8 +151,11 @@ int main(int, char *[]) {
         }
         */
 
-        // add a new subvalue in "favourite_values" and change the "age"
-        json_variant &var = doc.json();         // the reference symbol is important if you want to change the document source
+        // add a new subvalue in "favourite_values" and change the "age":
+
+        // note that the reference symbol is important if 
+        // you want to change the document source.
+        json_variant &var = doc.json();
         json_object &obj = var.to_object();
         obj.at("age") = 44;
         json_array &arr = obj["favourite_values"].to_array();
@@ -161,7 +179,9 @@ int main(int, char *[]) {
         }
         */
 
-        if (doc.save()) { // only successfull if document only contains valid json_variants (variants with values) and the filename is valid
+        // only successfull if document only contains valid json_variants
+        // (variants with values) and the filename is valid
+        if (doc.save()) { 
             std::cout << "document saved!" << std::endl;
 
             doc.close(); // optional
@@ -176,24 +196,36 @@ int main(int, char *[]) {
 
 ```cpp
 json_variant var;           // the json variant currently holds no value and is invalid
-        
-std::cout << var.is_invalid_json() << std::endl;    // will print "1"
 
-var = json_variant::null;   // setting the json_variant to null
-// NOTE: to initalize a json_variant with null you have to use json_variant::null, using for expample nullptr will NOT WORK.
+// will print "1"
+std::cout << var.is_invalid_json() << std::endl;    
 
-std::cout << var.is_invalid_json() << std::endl;    // will print "0"
-std::cout << var.is_null() << std::endl;            // will print "1"
+// setting the json_variant to null
+var = json_variant::null;
+// NOTE: to initalize a json_variant with null you 
+// have to use json_variant::null, using for expample 
+// nullptr will NOT WORK.
 
-var = 234;                  // setting the json_variant to json_int
+// will print "0"
+std::cout << var.is_invalid_json() << std::endl;
 
-var = 0.345;                // setting the json_variant to double
+// will print "1"
+std::cout << var.is_null() << std::endl;
 
-var = 2E-2;                 // setting the json_variant to double in scientific notation
+// setting the json_variant to json_int
+var = 234;
 
-var = true;                 // setting the json_variant to bool
+// setting the json_variant to double
+var = 0.345;
 
-var = "string value";       // setting the json_variant to std::string
+// setting the json_variant to double in scientific notation
+var = 2E-2;
+
+// setting the json_variant to bool
+var = true;
+
+// setting the json_variant to std::string
+var = "string value";       
 ```
 
 #### <a name="working_with_json_array_section"></a>Working with json_array
@@ -201,21 +233,34 @@ var = "string value";       // setting the json_variant to std::string
 Keep in mind that a `json_array` just a `typedef` for `std::vector<json_variant>` so all `std::vector` functions work on `json_array` as well.
 
 ```cpp
-json_variant var;                               // the json variant currently holds no value and is invalid
+// the json variant currently holds no value and is invalid
+json_variant var;
 
-var = json_array();                             // setting the json_variant to json_array
-var = json_array({234, 0.345, "string value"}); // the json_array holds json_variants so this is valid syntax
+// setting the json_variant to json_array
+var = json_array();
+// the json_array holds json_variants so this is valid syntax
+var = json_array({234, 0.345, "string value"});
 
-// add array value
-var.to_array().push_back("new value");          // add json_variant element "new value"
-var.to_array().push_back(false);                // adds json_variant element "false"
+// add array values:
 
-var.to_array()[2] = "string value 2";           // overwrites "string value" with "string value 2"
+// add json_variant element "new value"
+var.to_array().push_back("new value");
+// adds json_variant element "false"
+var.to_array().push_back(false);                
 
-// using a array reference
-json_array &arr = var.to_array();               // The reference symbol is important, otherwise you get a copy and won't modify the source array
-arr.push_back(456);                             // add json_variant element "456"
-arr[0] = 567;                                   // overwrites "234" with "567"
+// overwrites "string value" with "string value 2"
+var.to_array()[2] = "string value 2";           
+
+// using a array reference:
+
+// The reference symbol is important, otherwise 
+// you get a copy and won't modify the source array
+json_array &arr = var.to_array();
+
+// add json_variant element "456"
+arr.push_back(456);
+ // overwrites "234" with "567"
+arr[0] = 567;     
 ```
 
 #### <a name="working_with_json_object_section"></a>Working with json_object
@@ -223,15 +268,19 @@ arr[0] = 567;                                   // overwrites "234" with "567"
 Keep in mind that a `json_object` just a `typedef` for `std::map<std::string, json_variant>` so all `std::map` functions work on `json_array` as well.
 
 ```cpp
-json_variant var;                               // the json variant currently holds no value and is invalid
+// the json variant currently holds no value and is invalid
+json_variant var; 
 
-var = json_object();                                                                // initalizing with empty json object
-var = json_object({ {"property 1", true }, { "property 2", json_array({1, 2}) } }); // using the c++ 11 way to initialize
+// initalizing with empty json object
+var = json_object();
+// using the c++ 11 way to initialize
+var = json_object({ {"property 1", true }, { "property 2", json_array({1, 2}) } }); 
 
 // adding new properties with std::pair
 var.to_object().insert(std::pair<std::string, json_variant>("new property 3", -2 ));
 
-std::cout << var.to_object().at("new property 3").to_int() << std::endl; // prints "-2"
+// prints "-2"
+std::cout << var.to_object().at("new property 3").to_int() << std::endl; 
 
 // adding new properties with c++ 11
 var.to_object().insert({"new property", "new value"});
@@ -240,10 +289,11 @@ var.to_object().insert({"new property 2", json_variant::null });
 // changing a value
 var.to_object().at("property 1") = false;
 
-std::cout << var.to_object().at("property 1").to_bool() << std::endl; // prints "0" (false)
+// prints "0" (false)
+std::cout << var.to_object().at("property 1").to_bool() << std::endl; 
 
 // using a object reference
-json_object &obj = var.to_object(); // The reference symbol is important, otherwise you get a copy and won't modify the source object
+json_object &obj = var.to_object();
 obj.at("property 2") = 100;
 obj.insert({"property 5", -100});
 ```
@@ -287,12 +337,16 @@ else {
 All strings in an `json_variant` and its children will be unicode escaped before being converted to a string (for example when calling `json_variant::dump()`). However only the characters " and \\ will be escaped since those are the only illegal characters in an JSON string. json_variant::unescape_string() is able unescape ASCII-characters (other escaped characters will stay escaped). 
 
 ```cpp
-json_variant var = R"(raw json string \u3093with \" very \ illegal / \\ \t "" characters")";
+json_variant var = R"(raw json string \u3093with \" very \ 
+                      illegal / \\ \t "" characters")";
 
-std::string escaped = R"("raw json string \u005cu3093with \u005c\u0022 very \u005c illegal / \u005c\u005c \u005ct \u0022\u0022 characters\u0022")";
+std::string escaped = R"("raw json string \u005cu3093with \u005c\u0022 very 
+                          \u005c illegal / \u005c\u005c \u005ct \u0022\u0022 
+                          characters\u0022")";
 
 std::cout << var << std::endl;
-// prints: "raw json string \u005cu3093with \u005c\u0022 very \u005c illegal / \u005c\u005c \u005ct \u0022\u0022 characters\u0022"
+// prints: "raw json string \u005cu3093with \u005c\u0022 very \u005c illegal 
+//          / \u005c\u005c \u005ct \u0022\u0022 characters\u0022"
 
 std::cout << json_variant::unescape_string(escaped) << std::endl;
 // pritns: "raw json string \u3093with \" very \ illegal / \\ \t "" characters""
@@ -300,7 +354,7 @@ std::cout << json_variant::unescape_string(escaped) << std::endl;
 
 ### <a name="customization_section"></a>Customization
 
-The behaviour of the library can be changed by changing defines in the header. The header will be either called [json_library.h](GITHUB_URL_TODO) or [json_library/json_library.h](GITHUB_URL_TODO) if you've added the complete directory.
+The behaviour of the library can be changed by changing defines in the header. The header will be either called [json_library.h](https://github.com/n0dex/cppjsonlib/blob/master/json_library.h) or [json_library/json_library.h](https://github.com/n0dex/cppjsonlib/blob/master/json_library_source/json_library.h) if you've added the complete directory.
 
 - Defining `JSONLIB_VERBOSE_DEBUG` will enable writing debug messagess into `std::cout` and `std::cerr` that may be helpfull to you but those messages mostly report internal library errors. 
 - Changing the datatype in `JSONLIB_INT_TYPE` is possible and may be helpfull if you for expample already know that youre only working with short ints and want to reduce the memory usage. The datatype must be a *signed* int.

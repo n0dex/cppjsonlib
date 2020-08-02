@@ -196,7 +196,8 @@ int main(int, char *[]) {
 #### <a name="working_with_simple_section"></a>Working with simple json_variant values        
 
 ```cpp
-json_variant var;           // the json variant currently holds no value and is invalid
+// the json variant currently holds no value and is invalid
+json_variant var;
 
 // will print "1"
 std::cout << var.is_invalid_json() << std::endl;    

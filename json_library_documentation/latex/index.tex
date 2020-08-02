@@ -1,0 +1,367 @@
+The goal of this library is to provide a C++ J\+S\+ON interface that\textquotesingle{}s simple to use and doesn\textquotesingle{}t require any dependencies. This library provides all necessary operations required for working with J\+S\+ON documents (see \href{#expamles_section}{\tt examples}).
+
+{\bfseries Note\+:} the library only works with C++ 11 and newer.
+
+
+\begin{DoxyItemize}
+\item \href{#cpp_representation_section}{\tt C++ Representation of J\+S\+ON}
+\item \href{#integration_section}{\tt Integration}
+\item \href{#doc_section}{\tt Documentation}
+\item \href{#tests_section}{\tt Tests}
+\item \href{#expamles_section}{\tt Examples}
+\begin{DoxyItemize}
+\item \href{#parsing_json_string_section}{\tt Parsing a J\+S\+ON string}
+\item \href{#opening_changing_section}{\tt Opening, changing and saving a J\+S\+ON file}
+\item \href{#working_with_simple_section}{\tt Working with simple json\+\_\+variant values}
+\item \href{#working_with_json_array_section}{\tt Working with json\+\_\+array}
+\item \href{#working_with_json_object_section}{\tt Working with json\+\_\+object}
+\item \href{#typecast_exceptions_section}{\tt Typecast exceptions}
+\begin{DoxyItemize}
+\item \href{#handling_typecast_expception_section}{\tt Handling typecast a exception}
+\item \href{#avoid_typecast_exception_section}{\tt Avoid typecast a exception}
+\end{DoxyItemize}
+\item \href{#json_and_string_escapes_section}{\tt J\+S\+ON and string escapes}
+\end{DoxyItemize}
+\item \href{#customization_section}{\tt Customization}
+\item \href{#troubleshooting_section}{\tt Troubleshooting}
+\end{DoxyItemize}
+
+\subsubsection*{\label{_cpp_representation_section}%
+C++ Representation of J\+S\+ON}
+
+All possible J\+S\+ON values are represenented in the class {\ttfamily json\+\_\+variant}. The datatypes are\+:
+\begin{DoxyItemize}
+\item int value\+: {\ttfamily json\+\_\+int} (typedef of {\ttfamily std\+::int64\+\_\+t})
+\item double value\+: {\ttfamily double}
+\item bool value\+: {\ttfamily bool}
+\item string value\+: {\ttfamily std\+::string}
+\item array value\+: {\ttfamily json\+\_\+array} (typedef of {\ttfamily std\+::vector$<$json\+\_\+variant$>$})
+\item object value\+: {\ttfamily json\+\_\+object} (typedef of {\ttfamily std\+::map$<$std\+::string, json\+\_\+variant$>$})
+\end{DoxyItemize}
+
+\subsubsection*{\label{_integration_section}%
+Integration}
+
+Since the library consists only of the two files \mbox{[}\hyperlink{json__library_8h_source}{json\+\_\+library.\+h}\mbox{]}(G\+I\+T\+H\+U\+B\+\_\+\+U\+R\+L\+\_\+\+T\+O\+DO) and \mbox{[}json\+\_\+library.\+cpp\mbox{]}(G\+I\+T\+H\+U\+B\+\_\+\+U\+R\+L\+\_\+\+T\+O\+DO) you can just download them and add them into your project. To use the library, you should use {\ttfamily \#include \char`\"{}json\+\_\+library.\+h\char`\"{}} and define the namespace {\ttfamily using namespace json;} (recommended).
+
+If you prefer to add the files seperated by classes you can download the \mbox{[}json\+\_\+library\mbox{]}(G\+I\+T\+H\+U\+B\+\_\+\+U\+R\+L\+\_\+\+T\+O\+DO) directory and include the directory into your project. To use the library in this case, you should use {\ttfamily \#include \char`\"{}json\+\_\+library\+\_\+source/json\+\_\+library.\+h\char`\"{}}.
+
+\subsubsection*{\label{_doc_section}%
+Documentation}
+
+The library is documented with doxygen. The documentation can be found \mbox{[}here\mbox{]}(G\+I\+T\+H\+U\+B\+\_\+\+U\+R\+L\+\_\+\+T\+O\+DO).
+
+\subsubsection*{\label{_tests_section}%
+Tests}
+
+The library was thoroughly tested. The test cases are written with the Qt Test Library and can be found \mbox{[}here\mbox{]}(G\+I\+T\+H\+U\+B\+\_\+\+U\+R\+L\+\_\+\+T\+O\+DO).
+
+\subsubsection*{\label{_expamles_section}%
+Examples}
+
+The following examples will show how to work with the library.
+
+\paragraph*{\label{_parsing_json_string_section}%
+Parsing a J\+S\+ON string}
+
+
+\begin{DoxyCode}
+// include library
+#include "json\_library.h"
+
+// for convenience
+using namespace json;
+
+int main(int, char *[]) \{
+
+    // initializing a string
+    std::string string\_value = "\{ \(\backslash\)"name\(\backslash\)": \(\backslash\)"user\(\backslash\)", \(\backslash\)"age\(\backslash\)": 22, \(\backslash\)"favourite\_values\(\backslash\)": [2, null, false,
+       \{\}] \}";
+
+    // initializing a string with an easier writing - content same as above
+    string\_value = R"(\{
+        "name": "user",
+        "age": 22,
+        "favourite\_values": [2, null, false, \{\}]
+    \})";
+
+    // parse string
+    json\_variant json = json\_variant::parse(string\_value);
+
+    // print json into console
+    std::cout << json << std::endl;             // prints the json with default indent of 4
+    std::cout << json.dump(2) << std::endl;     // prints the json with indent of 2
+    std::cout << json.dump(0) << std::endl;     // prints the json no indent and no new lines:
+       "\{"age":22,"favourite\_values":[2,null,false,\{\}],"name":"user"\}"
+
+    std::cout << json.is\_valid\_json() << std::endl; // prints "1" because the source string is valid json
+       and was successfully parsed
+    std::cout << json.is\_array() << std::endl;      // prints "0" because the root is an object and not an
+       array
+
+    if (json.is\_object()) \{
+        std::cout << json.to\_object()["name"].to\_string() << std::endl;                 // prints "user"
+
+        json\_object &obj = json.to\_object();
+        std::cout << obj.at("favourite\_values").to\_array()[2].is\_bool() << std::endl;   // prints "1" since
+       the json array holds a "false" bool value in index 2
+
+        std::cout << obj.at("favourite\_values").dump(0) << std::endl;                   // prints
+       "[2,null,false,\{\}]"
+    \}
+
+    return 0;
+\}
+\end{DoxyCode}
+
+
+\paragraph*{\label{_opening_changing_section}%
+Opening, changing and saving a J\+S\+ON file}
+
+
+\begin{DoxyCode}
+// include library
+#include "json\_library.h"
+
+// for convenience
+using namespace json;
+
+int main(int, char *[]) \{
+    /*
+    example assumes "values.json" is a text file that contains the following json object:
+    \{
+        "name": "user",
+        "age": 22,
+        "favourite\_values": [2, null, false, \{\}]
+    \}
+    */
+    json\_document doc("values.json");
+
+    if (doc.open()) \{ // only successfull if document contains valid json syntax and the file was found
+        std::cout << doc.json() << std::endl;
+        /*
+        prints:
+        \{
+            "age": 22,
+            "favourite\_values": [
+                2,
+                null,
+                false,
+                \{
+
+                \}
+            ],
+            "name": "user"
+        \}
+        */
+
+        // add a new subvalue in "favourite\_values" and change the "age"
+        json\_variant &var = doc.json();         // the reference symbol is important if you want to change
+       the document source
+        json\_object &obj = var.to\_object();
+        obj.at("age") = 44;
+        json\_array &arr = obj["favourite\_values"].to\_array();
+        json\_object &obj2 = arr[3].to\_object();
+        obj2.insert(\{"favourite sub value", -11\});
+
+        std::cout << doc.json() << std::endl;
+        /*
+        prints:
+        \{
+            "age": 44,
+            "favourite\_values": [
+                2,
+                null,
+                false,
+                \{
+                    "favourite sub value": -11
+                \}
+            ],
+            "name": "user"
+        \}
+        */
+
+        if (doc.save()) \{ // only successfull if document only contains valid json\_variants (variants with
+       values) and the filename is valid
+            std::cout << "document saved!" << std::endl;
+
+            doc.close(); // optional
+        \}
+    \}
+
+    return 0;
+\}
+\end{DoxyCode}
+
+
+\paragraph*{\label{_working_with_simple_section}%
+Working with simple json\+\_\+variant values}
+
+
+\begin{DoxyCode}
+json\_variant var;           // the json variant currently holds no value and is invalid
+
+std::cout << var.is\_invalid\_json() << std::endl;    // will print "1"
+
+var = json\_variant::null;   // setting the json\_variant to null
+// NOTE: to initalize a json\_variant with null you have to use json\_variant::null, using for expample
+       nullptr will NOT WORK.
+
+std::cout << var.is\_invalid\_json() << std::endl;    // will print "0"
+std::cout << var.is\_null() << std::endl;            // will print "1"
+
+var = 234;                  // setting the json\_variant to json\_int
+
+var = 0.345;                // setting the json\_variant to double
+
+var = 2E-2;                 // setting the json\_variant to double in scientific notation
+
+var = true;                 // setting the json\_variant to bool
+
+var = "string value";       // setting the json\_variant to std::string
+\end{DoxyCode}
+
+
+\paragraph*{\label{_working_with_json_array_section}%
+Working with json\+\_\+array}
+
+Keep in mind that a {\ttfamily json\+\_\+array} just a {\ttfamily typedef} for {\ttfamily std\+::vector$<$json\+\_\+variant$>$} so all {\ttfamily std\+::vector} functions work on {\ttfamily json\+\_\+array} as well.
+
+
+\begin{DoxyCode}
+json\_variant var;                               // the json variant currently holds no value and is invalid
+
+var = json\_array();                             // setting the json\_variant to json\_array
+var = json\_array(\{234, 0.345, "string value"\}); // the json\_array holds json\_variants so this is valid
+       syntax
+
+// add array value
+var.to\_array().push\_back("new value");          // add json\_variant element "new value"
+var.to\_array().push\_back(false);                // adds json\_variant element "false"
+
+var.to\_array()[2] = "string value 2";           // overwrites "string value" with "string value 2"
+
+// using a array reference
+json\_array &arr = var.to\_array();               // The reference symbol is important, otherwise you get a
+       copy and won't modify the source array
+arr.push\_back(456);                             // add json\_variant element "456"
+arr[0] = 567;                                   // overwrites "234" with "567"
+\end{DoxyCode}
+
+
+\paragraph*{\label{_working_with_json_object_section}%
+Working with json\+\_\+object}
+
+Keep in mind that a {\ttfamily json\+\_\+object} just a {\ttfamily typedef} for {\ttfamily std\+::map$<$std\+::string, json\+\_\+variant$>$} so all {\ttfamily std\+::map} functions work on {\ttfamily json\+\_\+array} as well.
+
+
+\begin{DoxyCode}
+json\_variant var;                               // the json variant currently holds no value and is invalid
+
+var = json\_object();                                                                // initalizing with
+       empty json object
+var = json\_object(\{ \{"property 1", true \}, \{ "property 2", json\_array(\{1, 2\}) \} \}); // using the c++ 11 way
+       to initialize
+
+// adding new properties with std::pair
+var.to\_object().insert(std::pair<std::string, json\_variant>("new property 3", -2 ));
+
+std::cout << var.to\_object().at("new property 3").to\_int() << std::endl; // prints "-2"
+
+// adding new properties with c++ 11
+var.to\_object().insert(\{"new property", "new value"\});
+var.to\_object().insert(\{"new property 2", json\_variant::null \});
+
+// changing a value
+var.to\_object().at("property 1") = false;
+
+std::cout << var.to\_object().at("property 1").to\_bool() << std::endl; // prints "0" (false)
+
+// using a object reference
+json\_object &obj = var.to\_object(); // The reference symbol is important, otherwise you get a copy and
+       won't modify the source object
+obj.at("property 2") = 100;
+obj.insert(\{"property 5", -100\});
+\end{DoxyCode}
+
+
+\paragraph*{\label{_typecast_exceptions_section}%
+Typecast exceptions}
+
+Everytime a {\ttfamily json\+\_\+variant\+::to\+\_\+$\ast$type$\ast$()} ({\ttfamily to\+\_\+int()}, {\ttfamily to\+\_\+string()}, ...) gets called the json\+\_\+variant will try to cast the underlying value to the requested value. If the actuall value isn\textquotesingle{}t the requested value a {\ttfamily std\+::runtime\+\_\+error} will be thrown. To avoid handling exceptions you have to check whether the underlying value is actually the requested type. You can do so by using {\ttfamily is\+\_\+$\ast$type$\ast$()} ({\ttfamily is\+\_\+int()}, {\ttfamily is\+\_\+string()}, ...)
+
+\subparagraph*{\label{_handling_typecast_expception_section}%
+Handling typecast a exception}
+
+
+\begin{DoxyCode}
+json\_variant var = 234;
+
+try \{
+    // won't work since var is int
+    double d = var.to\_double();  
+    // ...
+\}
+catch (const std::runtime\_error &e) \{
+    std::cout << "runtime\_error: " << e.what() << std::endl;   
+\} 
+\end{DoxyCode}
+
+
+\subparagraph*{\label{_avoid_typecast_exception_section}%
+Avoid typecast a exception}
+
+
+\begin{DoxyCode}
+json\_variant var = 234;
+
+// returns false
+if (var.is\_double()) \{
+    double d = var.to\_double();   
+    // ...
+\}
+else \{
+    std::cout << "var is not double" << std::endl;   
+\}
+\end{DoxyCode}
+
+
+\paragraph*{\label{_json_and_string_escapes_section}%
+J\+S\+ON and string escapes}
+
+All strings in an {\ttfamily json\+\_\+variant} and its children will be unicode escaped before being converted to a string (for example when calling {\ttfamily json\+\_\+variant\+::dump()}). However only the characters " and \textbackslash{} will be escaped since those are the only illegal characters in an J\+S\+ON string. json\+\_\+variant\+::unescape\+\_\+string() is able unescape A\+S\+C\+I\+I-\/characters (other escaped characters will stay escaped).
+
+
+\begin{DoxyCode}
+json\_variant var = R"(raw json string \(\backslash\)u3093with \(\backslash\)" very \(\backslash\) illegal / \(\backslash\)\(\backslash\) \(\backslash\)t "" characters")";
+
+std::string escaped = R"("raw json string \(\backslash\)u005cu3093with \(\backslash\)u005c\(\backslash\)u0022 very \(\backslash\)u005c illegal / \(\backslash\)u005c\(\backslash\)u005c
+       \(\backslash\)u005ct \(\backslash\)u0022\(\backslash\)u0022 characters\(\backslash\)u0022")";
+
+std::cout << var << std::endl;
+// prints: "raw json string \(\backslash\)u005cu3093with \(\backslash\)u005c\(\backslash\)u0022 very \(\backslash\)u005c illegal / \(\backslash\)u005c\(\backslash\)u005c \(\backslash\)u005ct
+       \(\backslash\)u0022\(\backslash\)u0022 characters\(\backslash\)u0022"
+
+std::cout << json\_variant::unescape\_string(escaped) << std::endl;
+// pritns: "raw json string \(\backslash\)u3093with \(\backslash\)" very \(\backslash\) illegal / \(\backslash\)\(\backslash\) \(\backslash\)t "" characters""
+\end{DoxyCode}
+
+
+\subsubsection*{\label{_customization_section}%
+Customization}
+
+The behaviour of the library can be changed by changing defines in the header. The header will be either called \mbox{[}\hyperlink{json__library_8h_source}{json\+\_\+library.\+h}\mbox{]}(G\+I\+T\+H\+U\+B\+\_\+\+U\+R\+L\+\_\+\+T\+O\+DO) or \mbox{[}json\+\_\+library/json\+\_\+library.\+h\mbox{]}(G\+I\+T\+H\+U\+B\+\_\+\+U\+R\+L\+\_\+\+T\+O\+DO) if you\textquotesingle{}ve added the complete directory.
+
+
+\begin{DoxyItemize}
+\item Defining {\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+D\+E\+B\+UG} will enable writing debug messagess into {\ttfamily std\+::cout} and {\ttfamily std\+::cerr} that may be helpfull to you but those messages mostly report internal library errors.
+\item Changing the datatype in {\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+PE} is possible and may be helpfull if you for expample already know that youre only working with short ints and want to reduce the memory usage. The datatype must be a {\itshape signed} int.
+\end{DoxyItemize}
+
+\subsubsection*{\label{_troubleshooting_section}%
+Troubleshooting}
+
+
+\begin{DoxyItemize}
+\item The libraries standard namespace is called {\ttfamily json}. If there are conflicting naming issues in your project you can change the namespace by changing the define in {\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE} in the header (where to find the header is explained in \href{#customization_section}{\tt Customization}). 
+\end{DoxyItemize}

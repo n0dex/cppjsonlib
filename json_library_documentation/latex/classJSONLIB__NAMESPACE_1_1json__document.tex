@@ -1,0 +1,337 @@
+\hypertarget{classJSONLIB__NAMESPACE_1_1json__document}{}\section{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE\+:\+:json\+\_\+document Class Reference}
+\label{classJSONLIB__NAMESPACE_1_1json__document}\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+
+
+The \hyperlink{classJSONLIB__NAMESPACE_1_1json__document}{json\+\_\+document} class provides an interface for convenient json I/O operations.  
+
+
+
+
+{\ttfamily \#include $<$json\+\_\+document.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_abf4e22f3453ec9856f58a202dae0c836}{json\+\_\+document} (const std\+::string \&filename, const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant})
+\begin{DoxyCompactList}\small\item\em Initializes the json document with the passed values. \end{DoxyCompactList}\item 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a3295c12f7251f1df5dc5f727a4e5b597}{json\+\_\+document} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Initializes the json document and sets the json\+\_\+documents {\bfseries filename} to {\ttfamily filename}. \end{DoxyCompactList}\item 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_acf256862749f93052ab0a5ad54272c3e}{json\+\_\+document} ()
+\begin{DoxyCompactList}\small\item\em Initializes the json document with the default values. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a20dc761125ccf91f7747f28a7c356be7}{open} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Opens the file specified with {\ttfamily filename} and tries to parse the content as json. The json content can be afterwards accessed with \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a08e509059e628742f35716dddce2d740}{open} ()
+\begin{DoxyCompactList}\small\item\em Opens the file specified in the \hyperlink{classJSONLIB__NAMESPACE_1_1json__document}{json\+\_\+document} attribute {\ttfamily filename} and tries to parse the content as json. The json content can be afterwards accessed with \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ab2e8c0baffe0ef93f3d3dc78b342453b}{save} (const std\+::string \&filename, int indent=4) const
+\begin{DoxyCompactList}\small\item\em Saves the current \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} in the file referred in {\ttfamily filename}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a861865e1aae02c2de80eb60a4a8bd668}{save} (int indent=4) const
+\begin{DoxyCompactList}\small\item\em Saves the current \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} under the current filename. \end{DoxyCompactList}\item 
+bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a5a72e4dc0b37b95c70baefad930b5b71}{set\+\_\+json} (const std\+::string \&raw\+\_\+json\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Parses the passed string {\ttfamily raw\+\_\+json\+\_\+string} into a \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. The \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} can be accessed afterwards with \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()}. \end{DoxyCompactList}\item 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ae6c52de0f1b1b6e5825f9555b6026e1b}{set\+\_\+json} (const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&variant)
+\begin{DoxyCompactList}\small\item\em Sets the internal json value to {\ttfamily variant}. \end{DoxyCompactList}\item 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_acc406344661e361c75ac7bc307057712}{set\+\_\+filename} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Sets the json\+\_\+documents {\itshape filename} to {\ttfamily filename}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a6f362476926f33fb8c3437d15052e959}{get\+\_\+filename} () const
+\begin{DoxyCompactList}\small\item\em Returns the current json\+\_\+documents {\itshape filename}. \end{DoxyCompactList}\item 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \& \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the internally saved \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. \end{DoxyCompactList}\item 
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_afc25f82f6d2729be0ae1bcc82b8968e3}{json} () const
+\begin{DoxyCompactList}\small\item\em Returns a copy of the internally saved \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_a0a79ac1420c95c0f1de9670c7f81537d}\label{classJSONLIB__NAMESPACE_1_1json__document_a0a79ac1420c95c0f1de9670c7f81537d}} 
+void \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a0a79ac1420c95c0f1de9670c7f81537d}{close} ()
+\begin{DoxyCompactList}\small\item\em Closes the json document by overwriting the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} accessible via \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()} with the standard \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_af8f392a0ffc779277ead1f2bdb222930}{save} (const std\+::string \&filename, const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json}, int indent=4)
+\begin{DoxyCompactList}\small\item\em Saves the passed \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} {\ttfamily json} in the file called {\ttfamily filename}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classJSONLIB__NAMESPACE_1_1json__document}{json\+\_\+document} class provides an interface for convenient json I/O operations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_abf4e22f3453ec9856f58a202dae0c836}\label{classJSONLIB__NAMESPACE_1_1json__document_abf4e22f3453ec9856f58a202dae0c836}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!json\+\_\+document@{json\+\_\+document}}
+\index{json\+\_\+document@{json\+\_\+document}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{json\+\_\+document()}{json\_document()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::json\+\_\+document (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{json\+\_\+variant }\end{DoxyParamCaption})}
+
+
+
+Initializes the json document with the passed values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & needs to be a file path. \\
+\hline
+{\em \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}} & can be any \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_af8f392a0ffc779277ead1f2bdb222930}{save()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_a3295c12f7251f1df5dc5f727a4e5b597}\label{classJSONLIB__NAMESPACE_1_1json__document_a3295c12f7251f1df5dc5f727a4e5b597}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!json\+\_\+document@{json\+\_\+document}}
+\index{json\+\_\+document@{json\+\_\+document}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{json\+\_\+document()}{json\_document()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::json\+\_\+document (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Initializes the json document and sets the json\+\_\+documents {\bfseries filename} to {\ttfamily filename}. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a5a72e4dc0b37b95c70baefad930b5b71}{set\+\_\+json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a08e509059e628742f35716dddce2d740}{open()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_acf256862749f93052ab0a5ad54272c3e}\label{classJSONLIB__NAMESPACE_1_1json__document_acf256862749f93052ab0a5ad54272c3e}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!json\+\_\+document@{json\+\_\+document}}
+\index{json\+\_\+document@{json\+\_\+document}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{json\+\_\+document()}{json\_document()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::json\+\_\+document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the json document with the default values. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a5a72e4dc0b37b95c70baefad930b5b71}{set\+\_\+json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_acc406344661e361c75ac7bc307057712}{set\+\_\+filename()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_a6f362476926f33fb8c3437d15052e959}\label{classJSONLIB__NAMESPACE_1_1json__document_a6f362476926f33fb8c3437d15052e959}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!get\+\_\+filename@{get\+\_\+filename}}
+\index{get\+\_\+filename@{get\+\_\+filename}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{get\+\_\+filename()}{get\_filename()}}
+{\footnotesize\ttfamily std\+::string J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::get\+\_\+filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current json\+\_\+documents {\itshape filename}. 
+
+\begin{DoxyReturn}{Returns}
+The current json\+\_\+documents {\itshape filename}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}\label{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!json@{json}}
+\index{json@{json}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{json()}{json()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \& J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a reference to the internally saved \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the internally saved \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_afc25f82f6d2729be0ae1bcc82b8968e3}\label{classJSONLIB__NAMESPACE_1_1json__document_afc25f82f6d2729be0ae1bcc82b8968e3}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!json@{json}}
+\index{json@{json}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{json()}{json()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a copy of the internally saved \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. 
+
+\begin{DoxyReturn}{Returns}
+A copy of the internally saved \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_a20dc761125ccf91f7747f28a7c356be7}\label{classJSONLIB__NAMESPACE_1_1json__document_a20dc761125ccf91f7747f28a7c356be7}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!open@{open}}
+\index{open@{open}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Opens the file specified with {\ttfamily filename} and tries to parse the content as json. The json content can be afterwards accessed with \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & needs to be a file path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_af8f392a0ffc779277ead1f2bdb222930}{save()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the file was opened successfully and the text content was successfully parsed. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_a08e509059e628742f35716dddce2d740}\label{classJSONLIB__NAMESPACE_1_1json__document_a08e509059e628742f35716dddce2d740}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!open@{open}}
+\index{open@{open}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Opens the file specified in the \hyperlink{classJSONLIB__NAMESPACE_1_1json__document}{json\+\_\+document} attribute {\ttfamily filename} and tries to parse the content as json. The json content can be afterwards accessed with \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()}. 
+
+\begin{DoxyNote}{Note}
+This function assumes that the {\ttfamily filename} was already set. If no {\ttfamily filename} was set the function will return {\bfseries false}. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_af8f392a0ffc779277ead1f2bdb222930}{save()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_acc406344661e361c75ac7bc307057712}{set\+\_\+filename()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a3295c12f7251f1df5dc5f727a4e5b597}{json\+\_\+document(const std\+::string \&)} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the file was opened successfully and the text content was successfully parsed. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_af8f392a0ffc779277ead1f2bdb222930}\label{classJSONLIB__NAMESPACE_1_1json__document_af8f392a0ffc779277ead1f2bdb222930}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!save@{save}}
+\index{save@{save}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{json,  }\item[{int}]{indent = {\ttfamily 4} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Saves the passed \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} {\ttfamily json} in the file called {\ttfamily filename}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & needs to be a file path. \\
+\hline
+{\em \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}} & can be any \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} but must be a valid json object (must contain a value). \\
+\hline
+{\em indent} & defines the spaces used for indentation. If the indent is set to 0 then no indentation and new lines will be created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__variant_a158e3148d9256af3d1b8251b2ca7b6c4}{json\+\_\+variant\+::is\+\_\+valid\+\_\+json()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} is valid and the document was saved successfully. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_ab2e8c0baffe0ef93f3d3dc78b342453b}\label{classJSONLIB__NAMESPACE_1_1json__document_ab2e8c0baffe0ef93f3d3dc78b342453b}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!save@{save}}
+\index{save@{save}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{int}]{indent = {\ttfamily 4} }\end{DoxyParamCaption}) const}
+
+
+
+Saves the current \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} in the file referred in {\ttfamily filename}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & needs to be a file path. \\
+\hline
+{\em indent} & defines the spaces used for indentation. If the indent is set to 0 then no indentation and no new lines will be created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+is\+\_\+valid\+\_\+json() 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a5a72e4dc0b37b95c70baefad930b5b71}{set\+\_\+json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a08e509059e628742f35716dddce2d740}{open()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} is valid and the document was saved successfully. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_a861865e1aae02c2de80eb60a4a8bd668}\label{classJSONLIB__NAMESPACE_1_1json__document_a861865e1aae02c2de80eb60a4a8bd668}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!save@{save}}
+\index{save@{save}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::save (\begin{DoxyParamCaption}\item[{int}]{indent = {\ttfamily 4} }\end{DoxyParamCaption}) const}
+
+
+
+Saves the current \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} under the current filename. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent} & defines the spaces used for indentation. If the indent is set to 0 then no indentation and no new lines will be created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+is\+\_\+valid\+\_\+json() 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_acc406344661e361c75ac7bc307057712}{set\+\_\+filename()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a5a72e4dc0b37b95c70baefad930b5b71}{set\+\_\+json()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a08e509059e628742f35716dddce2d740}{open()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} is valid and the document was saved successfully. Otherwise {\bfseries false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_acc406344661e361c75ac7bc307057712}\label{classJSONLIB__NAMESPACE_1_1json__document_acc406344661e361c75ac7bc307057712}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!set\+\_\+filename@{set\+\_\+filename}}
+\index{set\+\_\+filename@{set\+\_\+filename}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{set\+\_\+filename()}{set\_filename()}}
+{\footnotesize\ttfamily void J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::set\+\_\+filename (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Sets the json\+\_\+documents {\itshape filename} to {\ttfamily filename}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & needs to be a file path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_a08e509059e628742f35716dddce2d740}{open()} 
+
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_af8f392a0ffc779277ead1f2bdb222930}{save()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_a5a72e4dc0b37b95c70baefad930b5b71}\label{classJSONLIB__NAMESPACE_1_1json__document_a5a72e4dc0b37b95c70baefad930b5b71}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!set\+\_\+json@{set\+\_\+json}}
+\index{set\+\_\+json@{set\+\_\+json}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{set\+\_\+json()}{set\_json()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::set\+\_\+json (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{raw\+\_\+json\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Parses the passed string {\ttfamily raw\+\_\+json\+\_\+string} into a \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. The \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} can be accessed afterwards with \hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()}. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJSONLIB__NAMESPACE_1_1json__document_ae6c52de0f1b1b6e5825f9555b6026e1b}\label{classJSONLIB__NAMESPACE_1_1json__document_ae6c52de0f1b1b6e5825f9555b6026e1b}} 
+\index{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}!set\+\_\+json@{set\+\_\+json}}
+\index{set\+\_\+json@{set\+\_\+json}!J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document@{J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document}}
+\subsubsection{\texorpdfstring{set\+\_\+json()}{set\_json()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::json\+\_\+document\+::set\+\_\+json (\begin{DoxyParamCaption}\item[{const \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant} \&}]{variant }\end{DoxyParamCaption})}
+
+
+
+Sets the internal json value to {\ttfamily variant}. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classJSONLIB__NAMESPACE_1_1json__document_ad87b8e7d68ba854dbd730758273a3b93}{json()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}} & can be any \hyperlink{classJSONLIB__NAMESPACE_1_1json__variant}{json\+\_\+variant}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+json\+\_\+library\+\_\+source/json\+\_\+document.\+h\item 
+json\+\_\+library\+\_\+source/json\+\_\+document.\+cpp\end{DoxyCompactItemize}

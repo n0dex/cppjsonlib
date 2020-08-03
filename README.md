@@ -1,4 +1,4 @@
-# A simple C++ JSON Library with no dependencies
+# A Simple Dependency-Free C++ JSON Library
 
 The goal of this library is to provide a C++ JSON interface that's simple to use and doesn't require any dependencies. 
 This library provides all necessary operations required for working with JSON documents (see [examples](#expamles_section)). 

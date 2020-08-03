@@ -351,7 +351,7 @@ std::cout << var << std::endl;
 //          / \u005c\u005c \u005ct \u0022\u0022 characters\u0022"
 
 std::cout << json_variant::unescape_string(escaped) << std::endl;
-// pritns: "raw json string \u3093with \" very \ illegal / \\ \t "" characters""
+// prints: "raw json string \u3093with \" very \ illegal / \\ \t "" characters""
 ```
 
 ### <a name="customization_section"></a>Customization

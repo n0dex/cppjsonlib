@@ -232,7 +232,7 @@ var = "string value";
 
 #### <a name="working_with_json_array_section"></a>Working with json_array
 
-Keep in mind that a `json_array` just a `typedef` for `std::vector<json_variant>` so all `std::vector` functions work on `json_array` as well.
+Keep in mind that a `json_array` is just a `typedef` for `std::vector<json_variant>` so all `std::vector` functions work on `json_array` as well.
 
 ```cpp
 // the json variant currently holds no value and is invalid
@@ -256,7 +256,7 @@ var.to_array()[2] = "string value 2";
 // using a array reference:
 
 // The reference symbol is important, otherwise 
-// you get a copy and won't modify the source array
+// you'll get a copy and won't modify the source array
 json_array &arr = var.to_array();
 
 // add json_variant element "456"
@@ -267,7 +267,7 @@ arr[0] = 567;
 
 #### <a name="working_with_json_object_section"></a>Working with json_object
 
-Keep in mind that a `json_object` just a `typedef` for `std::map<std::string, json_variant>` so all `std::map` functions work on `json_array` as well.
+Keep in mind that a `json_object` is just a `typedef` for `std::map<std::string, json_variant>` so all `std::map` functions work on `json_object` as well.
 
 ```cpp
 // the json variant currently holds no value and is invalid
@@ -356,12 +356,12 @@ std::cout << json_variant::unescape_string(escaped) << std::endl;
 
 ### <a name="customization_section"></a>Customization
 
-The behaviour of the library can be changed by changing defines in the header. The header will be either called [json_library.h](https://github.com/n0dex/cppjsonlib/blob/master/json_library.h) or [json_library/json_library.h](https://github.com/n0dex/cppjsonlib/blob/master/json_library_source/json_library.h) if you've added the complete directory.
+The behaviour of the library can be changed by changing defines in the header. The header will be either called [json_library.h](https://github.com/n0dex/cppjsonlib/blob/master/json_library.h) or [json_library/json_defines.h](https://github.com/n0dex/cppjsonlib/blob/master/json_library_source/json_defines.h) if you've added the complete directory.
 
-- Defining `JSONLIB_VERBOSE_DEBUG` will enable writing debug messagess into `std::cout` and `std::cerr` that may be helpfull to you but those messages mostly report internal library errors. 
+- Defining `JSONLIB_VERBOSE_DEBUG` will enable writing debug messagess into `std::cout` and `std::cerr` that may be helpfull to you, but those messages mostly report internal library errors. 
 - Changing the datatype in `JSONLIB_INT_TYPE` is possible and may be helpfull if you for expample already know that youre only working with short ints and want to reduce the memory usage. The datatype must be a *signed* int.
  
 
 ### <a name="troubleshooting_section"></a>Troubleshooting
 
-- The libraries standard namespace is called `json`. If there are conflicting naming issues in your project you can change the namespace by changing the define in `JSONLIB_NAMESPACE` in the header (where to find the header is explained in [Customization](#customization_section)). 
+- The libraries standard namespace is called `json`. If there are conflicting naming issues in your project you can change the namespace by changing the define `JSONLIB_NAMESPACE` in the header (where to find the header is explained in [Customization](#customization_section)). 

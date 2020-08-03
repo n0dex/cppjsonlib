@@ -43,7 +43,7 @@ To use the library in this case, you should use `#include "json_library_source/j
 
 ### <a name="doc_section"></a>Documentation
 
-The library is documented with doxygen. The documentation can be found [here](https://github.com/n0dex/cppjsonlib/tree/master/json_library_documentation). \n
+The library is documented with doxygen. The documentation can be found [here](https://github.com/n0dex/cppjsonlib/tree/master/json_library_documentation).  
 To use the documentation open [html/index.html](https://github.com/n0dex/cppjsonlib/blob/master/json_library_documentation/html/index.html) in a browser.
 
 ### <a name="tests_section"></a>Tests

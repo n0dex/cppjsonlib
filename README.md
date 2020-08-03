@@ -3,7 +3,7 @@
 The goal of this library is to provide a C++ JSON interface that's simple to use and doesn't require any dependencies. 
 This library provides all necessary operations required for working with JSON documents (see [examples](#expamles_section)). 
 
-**Note:** the library only works with C++ 11 and newer.
+**Note:** The library only works with C++ 11 and newer.
 
 - [C++ Representation of JSON](#cpp_representation_section)
 - [Integration](#integration_section)
@@ -43,7 +43,8 @@ To use the library in this case, you should use `#include "json_library_source/j
 
 ### <a name="doc_section"></a>Documentation
 
-The library is documented with doxygen. The documentation can be found [here](https://github.com/n0dex/cppjsonlib/tree/master/json_library_documentation).
+The library is documented with doxygen. The documentation can be found [here](https://github.com/n0dex/cppjsonlib/tree/master/json_library_documentation). \n
+To use the documentation open [html/index.html](https://github.com/n0dex/cppjsonlib/blob/master/json_library_documentation/html/index.html) in a browser.
 
 ### <a name="tests_section"></a>Tests
 

@@ -1,6 +1,6 @@
 The goal of this library is to provide a C++ J\+S\+ON interface that\textquotesingle{}s simple to use and doesn\textquotesingle{}t require any dependencies. This library provides all necessary operations required for working with J\+S\+ON documents (see \href{#expamles_section}{\tt examples}).
 
-{\bfseries Note\+:} the library only works with C++ 11 and newer.
+{\bfseries Note\+:} The library only works with C++ 11 and newer.
 
 
 \begin{DoxyItemize}
@@ -49,7 +49,8 @@ If you prefer to add the files seperated by classes you can download the \href{h
 \subsubsection*{\label{_doc_section}%
 Documentation}
 
-The library is documented with doxygen. The documentation can be found \href{https://github.com/n0dex/cppjsonlib/tree/master/json_library_documentation}{\tt here}.
+The library is documented with doxygen. The documentation can be found \href{https://github.com/n0dex/cppjsonlib/tree/master/json_library_documentation}{\tt here}. ~\newline
+To use the documentation open \href{https://github.com/n0dex/cppjsonlib/blob/master/json_library_documentation/html/index.html}{\tt html/index.\+html} in a browser.
 
 \subsubsection*{\label{_tests_section}%
 Tests}
@@ -103,7 +104,7 @@ Parsing a J\+S\+ON string}
 
     \textcolor{comment}{// prints "1" because the source string is valid json and was successfully parsed}
     std::cout << json.is\_valid\_json() << std::endl; 
-     \textcolor{comment}{// prints "0" because the root is an object and not an array}
+    \textcolor{comment}{// prints "0" because the root is an object and not an array}
     std::cout << json.is\_array() << std::endl;     
 
     \textcolor{keywordflow}{if} (json.is\_object()) \{
@@ -250,7 +251,7 @@ var = \textcolor{stringliteral}{"string value"};
 \paragraph*{\label{_working_with_json_array_section}%
 Working with json\+\_\+array}
 
-Keep in mind that a {\ttfamily json\+\_\+array} just a {\ttfamily typedef} for {\ttfamily std\+::vector$<$json\+\_\+variant$>$} so all {\ttfamily std\+::vector} functions work on {\ttfamily json\+\_\+array} as well.
+Keep in mind that a {\ttfamily json\+\_\+array} is just a {\ttfamily typedef} for {\ttfamily std\+::vector$<$json\+\_\+variant$>$} so all {\ttfamily std\+::vector} functions work on {\ttfamily json\+\_\+array} as well.
 
 
 \begin{DoxyCode}
@@ -275,7 +276,7 @@ var.to\_array()[2] = \textcolor{stringliteral}{"string value 2"};
 \textcolor{comment}{// using a array reference:}
 
 \textcolor{comment}{// The reference symbol is important, otherwise }
-\textcolor{comment}{// you get a copy and won't modify the source array}
+\textcolor{comment}{// you'll get a copy and won't modify the source array}
 json\_array &arr = var.to\_array();
 
 \textcolor{comment}{// add json\_variant element "456"}
@@ -288,7 +289,7 @@ arr[0] = 567;
 \paragraph*{\label{_working_with_json_object_section}%
 Working with json\+\_\+object}
 
-Keep in mind that a {\ttfamily json\+\_\+object} just a {\ttfamily typedef} for {\ttfamily std\+::map$<$std\+::string, json\+\_\+variant$>$} so all {\ttfamily std\+::map} functions work on {\ttfamily json\+\_\+array} as well.
+Keep in mind that a {\ttfamily json\+\_\+object} is just a {\ttfamily typedef} for {\ttfamily std\+::map$<$std\+::string, json\+\_\+variant$>$} so all {\ttfamily std\+::map} functions work on {\ttfamily json\+\_\+object} as well.
 
 
 \begin{DoxyCode}
@@ -367,7 +368,7 @@ json\_variant var = 234;
 \paragraph*{\label{_json_and_string_escapes_section}%
 J\+S\+ON and string escapes}
 
-All strings in an {\ttfamily json\+\_\+variant} and its children will be unicode escaped before being converted to a string (for example when calling {\ttfamily json\+\_\+variant\+::dump()}). However only the characters " and \textbackslash{} will be escaped since those are the only illegal characters in an J\+S\+ON string. json\+\_\+variant\+::unescape\+\_\+string() is able unescape A\+S\+C\+I\+I-\/characters (other escaped characters will stay escaped).
+All strings in a {\ttfamily json\+\_\+variant} and its children will be unicode escaped before being converted to a string (for example when calling {\ttfamily json\+\_\+variant\+::dump()}). However only the characters " and \textbackslash{} will be escaped since those are the only illegal characters in a J\+S\+ON string. json\+\_\+variant\+::unescape\+\_\+string() is able unescape A\+S\+C\+I\+I-\/characters (other escaped characters will stay escaped).
 
 
 \begin{DoxyCode}
@@ -383,18 +384,18 @@ json\_variant var = R\textcolor{stringliteral}{"(raw json string \(\backslash\)u
 \textcolor{comment}{//          / \(\backslash\)u005c\(\backslash\)u005c \(\backslash\)u005ct \(\backslash\)u0022\(\backslash\)u0022 characters\(\backslash\)u0022"}
 
 std::cout << json\_variant::unescape\_string(escaped) << std::endl;
-\textcolor{comment}{// pritns: "raw json string \(\backslash\)u3093with \(\backslash\)" very \(\backslash\) illegal / \(\backslash\)\(\backslash\) \(\backslash\)t "" characters""}
+\textcolor{comment}{// prints: "raw json string \(\backslash\)u3093with \(\backslash\)" very \(\backslash\) illegal / \(\backslash\)\(\backslash\) \(\backslash\)t "" characters""}
 \end{DoxyCode}
 
 
 \subsubsection*{\label{_customization_section}%
 Customization}
 
-The behaviour of the library can be changed by changing defines in the header. The header will be either called \href{https://github.com/n0dex/cppjsonlib/blob/master/json_library.h}{\tt json\+\_\+library.\+h} or \href{https://github.com/n0dex/cppjsonlib/blob/master/json_library_source/json_library.h}{\tt json\+\_\+library/json\+\_\+library.\+h} if you\textquotesingle{}ve added the complete directory.
+The behaviour of the library can be changed by changing defines in the header. The header will be either called \href{https://github.com/n0dex/cppjsonlib/blob/master/json_library.h}{\tt json\+\_\+library.\+h} or \href{https://github.com/n0dex/cppjsonlib/blob/master/json_library_source/json_defines.h}{\tt json\+\_\+library/json\+\_\+defines.\+h} if you\textquotesingle{}ve added the complete directory.
 
 
 \begin{DoxyItemize}
-\item Defining {\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+D\+E\+B\+UG} will enable writing debug messagess into {\ttfamily std\+::cout} and {\ttfamily std\+::cerr} that may be helpfull to you but those messages mostly report internal library errors.
+\item Defining {\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+D\+E\+B\+UG} will enable writing debug messagess into {\ttfamily std\+::cout} and {\ttfamily std\+::cerr} that may be helpfull to you, but those messages mostly report internal library errors.
 \item Changing the datatype in {\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+PE} is possible and may be helpfull if you for expample already know that youre only working with short ints and want to reduce the memory usage. The datatype must be a {\itshape signed} int.
 \end{DoxyItemize}
 
@@ -403,5 +404,5 @@ Troubleshooting}
 
 
 \begin{DoxyItemize}
-\item The libraries standard namespace is called {\ttfamily json}. If there are conflicting naming issues in your project you can change the namespace by changing the define in {\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE} in the header (where to find the header is explained in \href{#customization_section}{\tt Customization}). 
+\item The libraries standard namespace is called {\ttfamily json}. If there are conflicting naming issues in your project you can change the namespace by changing the define {\ttfamily J\+S\+O\+N\+L\+I\+B\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE} in the header (where to find the header is explained in \href{#customization_section}{\tt Customization}). 
 \end{DoxyItemize}

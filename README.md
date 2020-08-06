@@ -10,7 +10,8 @@ This library provides all necessary operations required for working with JSON do
 - [Documentation](#doc_section)
 - [Tests](#tests_section)
 - [Examples](#expamles_section)
-    - [Parsing a JSON string](#parsing_json_string_section)
+    - [Converting a string into a json_variant](#convert_a_string_to_json_section)
+    - [Converting a json_variant into a string](#convert_a_json_to_string_section)
     - [Opening, changing and saving a JSON file](#opening_changing_section)
     - [Working with simple json_variant values](#working_with_simple_section)
     - [Working with json_array](#working_with_json_array_section)
@@ -35,12 +36,25 @@ The datatypes are:
 
 ### <a name="integration_section"></a>Integration
 
-Since the library consists only of the two files [json_library.h](https://github.com/n0dex/cppjsonlib/blob/master/json_library.h) and [json_library.cpp](https://github.com/n0dex/cppjsonlib/blob/master/json_library.cpp) you can just download them and add them into your project.
-To use the library, you should use `#include "json_library.h"` and define the namespace `using namespace json;` (recommended).
+Since the library consists only of the two files [json_library.h](https://github.com/n0dex/cppjsonlib/blob/master/json_library.h) and [json_library.cpp](https://github.com/n0dex/cppjsonlib/blob/master/json_library.cpp) you can just download them and add them into your project.  
+To use the library, add:
+```cpp
+// include library
+#include "json_library.h"
 
-If you prefer to add the files seperated by classes you can download the [json_library](https://github.com/n0dex/cppjsonlib/tree/master/json_library_source) directory and include the directory into your project.  
-To use the library in this case, you should use `#include "json_library_source/json_library.h"`.
+// for convenience
+using namespace json;
 
+int main(int, char *[]) {
+    ...
+}
+```
+
+If you prefer to add the files seperated by classes you can download the [json_library](https://github.com/n0dex/cppjsonlib/tree/master/json_library_source) directory and include the directory into your project.   
+In this case the following include should be used:
+```cpp
+#include "json_library_source/json_library.h"
+```
 ### <a name="doc_section"></a>Documentation
 
 The library is documented with doxygen. The documentation can be found [here](https://github.com/n0dex/cppjsonlib/tree/master/json_library_documentation).  
@@ -54,143 +68,132 @@ The library was thoroughly tested. The test cases are written with the Qt Test L
 
 The following examples will show how to work with the library.
 
-#### <a name="parsing_json_string_section"></a>Parsing a JSON string
+#### <a name="convert_a_string_to_json_section"></a>Converting a string into a json_variant
 
 ```cpp
-// include library
-#include "json_library.h"
+json_variant json;
 
-// for convenience
-using namespace json;
+// intializing a json_variant from a string
+json = json_variant::parse("{" 
+    "\"name\": \"user\", "
+    "\"age\": 22, "
+    "\"favourite_values\": ["
+        "2,"
+        "null,"
+        "false,"
+        "{}"
+    "] "
+"}");
 
-int main(int, char *[]) {
+// intializing a json_variant from a string with more convenient writing
+json = json_variant::parse(R"({
+    "name": "user",
+    "age": 22,
+    "favourite_values": [
+        2,
+        null,
+        false,
+        {}
+    ]
+})");
 
-    // initializing a string
-    std::string string_value = "{ 
-        \"name\": \"user\", 
-        \"age\": 22, 
-        \"favourite_values\": [ 2, null, false, {}] 
-    }";
-
-    // initializing a string with an easier writing - content same as above
-    string_value = R"({
-        "name": "user",
-        "age": 22,
-        "favourite_values": [2, null, false, {}]
-    })";
-
-    // parse string
-    json_variant json = json_variant::parse(string_value);
-
-    // print json into console
-
-    // prints the json with default indent of 4
-    std::cout << json << std::endl;
-    // prints the json with indent of 2    
-    std::cout << json.dump(2) << std::endl;     
-    // prints the json no indent and no new lines: 
-    // "{"age":22,"favourite_values":[2,null,false,{}],"name":"user"}"
-    std::cout << json.dump(0) << std::endl;     
-
-    // prints "1" because the source string is valid json and was successfully parsed
-    std::cout << json.is_valid_json() << std::endl; 
-    // prints "0" because the root is an object and not an array
-    std::cout << json.is_array() << std::endl;     
-
-    if (json.is_object()) {
-        // prints "user"
-        std::cout << json.to_object()["name"].to_string() << std::endl;                 
-
-        json_object &obj = json.to_object();
-
-        // prints "1" since the json array holds a "false" bool value in index 2
-        std::cout << obj.at("favourite_values").to_array()[2].is_bool() << std::endl;   
-
-        // prints "[2,null,false,{}]"
-        std::cout << obj.at("favourite_values").dump(0) << std::endl;                  
-    }
-
-    return 0;
+if (json.is_valid_json()) {
+    // do something with json
+}
+else {        
+    std::cout << "The string isn't in valid JSON syntax.";
 }
 ```
 
-#### <a name="opening_changing_section"></a>Opening, changing and saving a JSON file
+#### <a name="convert_a_json_to_string_section"></a>Converting a json_variant into a string
 
 ```cpp
-// include library
-#include "json_library.h"
+json_variant json = json_variant::parse(...);
+std::string str;
 
-// for convenience
-using namespace json;
+// convert the json_variant into a string with the default indent of 4 spaces
+str = json.dump();
+// convert the json_variant into a string with a indent of 2 spaces
+str = json.dump(2);
+// convert the json_variant into a string with no indent and no new lines
+str = json.dump(0);
 
-int main(int, char *[]) {
-    /*
-    example assumes "values.json" is a text file that contains the following json object:
-    {
-        "name": "user",
-        "age": 22,
-        "favourite_values": [2, null, false, {}]
-    }
-    */
-    json_document doc("values.json");
+// converting and writing the json_variant into std::ostream directly is also possible
+std::cout << json << std::endl;
+```
 
-    // only successfull if document contains valid json syntax and the file was found
-    if (doc.open()) { 
-        std::cout << doc.json() << std::endl;
-        /*
-        prints:
+#### <a name="opening_changing_section"></a>Opening, changing and saving a JSON file
+This example assumes that there is a file called `values.json` saved on the hard drive with the following content:
+```json 
+{
+    "age": 22,
+    "favourite_values": [
+        2,
+        null,
+        false,
         {
-            "age": 22,
-            "favourite_values": [
-                2,
-                null,
-                false,
-                {
 
-                }
-            ],
-            "name": "user"
         }
-        */
+    ],
+    "name": "user"
+}
+```
+`json_document` provides simple JSON I/O access:
+```cpp
+// define json document used for I/O operations
+json_document doc("values.json");
 
-        // add a new subvalue in "favourite_values" and change the "age":
+// read and parse the file content
+bool ok = doc.open();
 
-        // note that the reference symbol is important if 
-        // you want to change the document source.
-        json_variant &var = doc.json();
-        json_object &obj = var.to_object();
-        obj.at("age") = 44;
-        json_array &arr = obj["favourite_values"].to_array();
-        json_object &obj2 = arr[3].to_object();
-        obj2.insert({"favourite sub value", -11});
+// only successfull if document contains valid 
+// json syntax and the file was found
+if (ok) {
+    // print the content
+    std::cout << doc.json() << std::endl;
 
-        std::cout << doc.json() << std::endl;
-        /*
-        prints:
-        {
-            "age": 44,
-            "favourite_values": [
-                2,
-                null,
-                false,
-                {
-                    "favourite sub value": -11
-                }
-            ],
-            "name": "user"
-        }
-        */
+    // add a new subvalue in "favourite_values" and change the "age":
 
-        // only successfull if document only contains valid json_variants
-        // (variants with values) and the filename is valid
-        if (doc.save()) { 
-            std::cout << "document saved!" << std::endl;
+    // note that the reference symbol is important if 
+    // you want to change the document source.
+    json_variant &var = doc.json();
+    json_object &obj = var.to_object();
 
-            doc.close(); // optional
-        }
+    // change the value of age
+    obj.at("age") = 44;
+
+    // add a new value in "favourite_values" 
+    json_array &arr = obj["favourite_values"].to_array();
+    json_object &obj2 = arr[3].to_object();
+    obj2.insert({"favourite sub value", -11});
+
+    // save the changes into the file
+    ok = doc.save();
+
+    // only successfull if document only contains valid json_variants
+    // (variants with values) and the filename is valid
+    if (ok) { 
+        std::cout << "document successfully saved." << std::endl;
     }
 
-    return 0;
+    // optional
+    doc.close(); 
+}
+```
+  
+After running the code the file content will look like this:
+```json 
+{
+    "age": 44,
+    "favourite_values": [
+        2,
+        null,
+        false,
+        {
+            "favourite sub value": -11
+        }
+    ],
+    "name": "user"
 }
 ```
 
@@ -207,7 +210,7 @@ std::cout << var.is_invalid_json() << std::endl;
 var = json_variant::null;
 // NOTE: to initalize a json_variant with null you 
 // have to use json_variant::null, using for expample 
-// nullptr will NOT WORK.
+// nullptr will not work
 
 // will print "0"
 std::cout << var.is_invalid_json() << std::endl;
@@ -233,7 +236,7 @@ var = "string value";
 
 #### <a name="working_with_json_array_section"></a>Working with json_array
 
-Keep in mind that a `json_array` is just a `typedef` for `std::vector<json_variant>` so all `std::vector` functions work on `json_array` as well.
+Keep in mind that a `json_array` is just a `typedef` of `std::vector<json_variant>` so all `std::vector` functions work on `json_array` as well.
 
 ```cpp
 // the json variant currently holds no value and is invalid
@@ -268,7 +271,7 @@ arr[0] = 567;
 
 #### <a name="working_with_json_object_section"></a>Working with json_object
 
-Keep in mind that a `json_object` is just a `typedef` for `std::map<std::string, json_variant>` so all `std::map` functions work on `json_object` as well.
+Keep in mind that a `json_object` is just a `typedef` of `std::map<std::string, json_variant>` so all `std::map` functions work on `json_object` as well.
 
 ```cpp
 // the json variant currently holds no value and is invalid
@@ -303,7 +306,7 @@ obj.insert({"property 5", -100});
 
 #### <a name="typecast_exceptions_section"></a>Typecast exceptions
 
-Everytime a `json_variant::to_*type*()` (`to_int()`, `to_string()`, ...) gets called the json_variant will try to cast the underlying value to the requested value. If the actuall value isn't the requested value a `std::runtime_error` will be thrown. To avoid handling exceptions you have to check whether the underlying value is actually the requested type. You can do so by using `is_*type*()` (`is_int()`, `is_string()`, ...)
+Everytime a `json_variant::to_*type*()` (`to_int()`, `to_string()`, ...) gets called the `json_variant` will try to cast the underlying value to the requested value. If the actuall value isn't the requested value a `std::runtime_error` will be thrown. To avoid handling exceptions you have to check whether the underlying value is actually the requested type. You can do so by using `is_*type*()` (`is_int()`, `is_string()`, ...)
 
 ##### <a name="handling_typecast_expception_section"></a>Handling typecast a exception
 
@@ -337,22 +340,21 @@ else {
 
 #### <a name="json_and_string_escapes_section"></a>JSON and string escapes
 
-All strings in a `json_variant` and its children will be unicode escaped before being converted to a string (for example when calling `json_variant::dump()`). However only the characters " and \\ will be escaped since those are the only illegal characters in a JSON string. json_variant::unescape_string() is able unescape ASCII-characters (other escaped characters will stay escaped). 
+All strings in a `json_variant` and its children will be unicode escaped before being converted to a string (for example when calling `json_variant::dump()`). However only the characters " and \\ will be escaped since those are the only illegal characters in a JSON string. `json_variant::unescape_string()` is able unescape ASCII-characters (other escaped characters will stay escaped). 
 
 ```cpp
-json_variant var = R"(raw json string \u3093with \" very \ 
-                      illegal / \\ \t "" characters")";
+// same string content
+std::string unescaped = R"("name",\t user\u3093\n)";
+std::string escaped   = R"("\u0022name\u0022,\u005ct user\u005cu3093\u005cn")";
 
-std::string escaped = R"("raw json string \u005cu3093with \u005c\u0022 very 
-                          \u005c illegal / \u005c\u005c \u005ct \u0022\u0022 
-                          characters\u0022")";
+// initializes json_variant with string that contains illegal json characters
+json_variant var = unescaped;
 
 std::cout << var << std::endl;
-// prints: "raw json string \u005cu3093with \u005c\u0022 very \u005c illegal 
-//          / \u005c\u005c \u005ct \u0022\u0022 characters\u0022"
+// prints: '\u0022name\u0022,\u005ct user\u005cu3093\u005cn'
 
 std::cout << json_variant::unescape_string(escaped) << std::endl;
-// prints: "raw json string \u3093with \" very \ illegal / \\ \t "" characters""
+// prints: '"name",\t user\u3093\n'
 ```
 
 ### <a name="customization_section"></a>Customization

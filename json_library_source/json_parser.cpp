@@ -39,10 +39,10 @@ json_variant json_parser::match_json(tokens *toks) {
 std::string json_parser::combine_tokens_to_string(std::size_t start_token, std::size_t end_token, tokens *toks) {
 #ifdef JSONLIB_VERBOSE_DEBUG
     if (!toks->valid_pos(start_token)) {
-        std::cerr << "json_parser::merge_tokens_to_string: ERROR: invalid startToken" << std::endl;
+        std::cerr << "json_parser::combine_tokens_to_string: ERROR: invalid startToken" << std::endl;
     }
     if (!toks->valid_pos(end_token)) {
-        std::cerr << "json_parser::merge_tokens_to_string: ERROR: invalid endToken" << std::endl;
+        std::cerr << "json_parser::combine_tokens_to_string: ERROR: invalid endToken" << std::endl;
     }
 #endif
 
@@ -420,7 +420,7 @@ json_parser::token_index json_parser::match_member(std::size_t pos, tokens *toks
 
     pos = match_ws(pos, toks).first;
     if (pos != 0) {
-        auto res = match_string(pos, toks); // FIXME: what if return 0
+        auto res = match_string(pos, toks);
         pos = res.first;
         json_variant string_property = res.second;
         if (pos != 0) {

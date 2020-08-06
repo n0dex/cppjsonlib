@@ -276,7 +276,7 @@ bool json_variant::equals(const json_variant &other) const {
         break;
     default:
 #ifdef JSONLIB_VERBOSE_DEBUG
-        std::cerr << "json_variant::free_memory: ERROR: unknown json_variant_type: " << type << std::endl;
+        std::cerr << "json_variant::equals: ERROR: unknown json_variant_type: " << type << std::endl;
 #endif
         break;
     }

@@ -23,17 +23,17 @@ namespace JSONLIB_NAMESPACE {
 
 class json_variant;
 
-/** \typedef json_array defines a std::vector that is usable in an json context. */
+/** \typedef json_array defines a std::vector that is usable in a json context. */
 typedef std::vector<json_variant> json_array;
 
-/** \typedef json_object defines a std::map that is usable in an json context. */
+/** \typedef json_object defines a std::map that is usable in a json context. */
 typedef std::map<std::string, json_variant> json_object;
 
-/** \typedef json_int defines the size an int representation of an int can have. */
+/** \typedef json_int defines the int type used to store json integers. */
 typedef JSONLIB_INT_TYPE json_int;
 
 /**
- * @brief The json_variant class provides an interface for storing json values in an c++ environment.
+ * @brief The json_variant class provides an interface for storing json values in a c++ environment.
  *
  * The json_variant can hold all necessary json values:
  *  - json_int
@@ -340,7 +340,7 @@ public:
 
     /**
      * @brief   Unescapes all unicode occurrences in \p str of ASCII-characters.
-     * @note    Non-ASCII characters won't be converted to prevent an encoding mess.
+     * @note    Non-ASCII characters won't be converted to prevent a encoding mess.
      * @param   str should be a simple string.
      * @see     escape_string()
      * @see     dump()
@@ -408,6 +408,7 @@ inline std::ostream& operator<<(std::ostream& os, const json_variant& variant) {
     os << variant.dump();
     return os;
 }
+
 
 /**
  * @brief The json_parser class provides an interface for
@@ -487,6 +488,7 @@ private:
     static token_index match_object(std::size_t pos, tokens *toks);
     static token_index match_array(std::size_t pos, tokens *toks);
 };
+
 
 /**
  * @brief The json_document class provides an interface for convenient json I/O operations.

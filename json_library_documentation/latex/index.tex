@@ -10,7 +10,8 @@ The goal of this library is to provide a C++ J\+S\+ON interface that\textquotesi
 \item \href{#tests_section}{\tt Tests}
 \item \href{#expamles_section}{\tt Examples}
 \begin{DoxyItemize}
-\item \href{#parsing_json_string_section}{\tt Parsing a J\+S\+ON string}
+\item \href{#convert_a_string_to_json_section}{\tt Converting a string into a json\+\_\+variant}
+\item \href{#convert_a_json_to_string_section}{\tt Converting a json\+\_\+variant into a string}
 \item \href{#opening_changing_section}{\tt Opening, changing and saving a J\+S\+ON file}
 \item \href{#working_with_simple_section}{\tt Working with simple json\+\_\+variant values}
 \item \href{#working_with_json_array_section}{\tt Working with json\+\_\+array}
@@ -42,11 +43,25 @@ All possible J\+S\+ON values are represenented in the class {\ttfamily json\+\_\
 \subsubsection*{\label{_integration_section}%
 Integration}
 
-Since the library consists only of the two files \href{https://github.com/n0dex/cppjsonlib/blob/master/json_library.h}{\tt json\+\_\+library.\+h} and \href{https://github.com/n0dex/cppjsonlib/blob/master/json_library.cpp}{\tt json\+\_\+library.\+cpp} you can just download them and add them into your project. To use the library, you should use {\ttfamily \#include \char`\"{}json\+\_\+library.\+h\char`\"{}} and define the namespace {\ttfamily using namespace json;} (recommended).
+Since the library consists only of the two files \href{https://github.com/n0dex/cppjsonlib/blob/master/json_library.h}{\tt json\+\_\+library.\+h} and \href{https://github.com/n0dex/cppjsonlib/blob/master/json_library.cpp}{\tt json\+\_\+library.\+cpp} you can just download them and add them into your project. To use the library, add\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// include library}
+\textcolor{preprocessor}{#include "json\_library.h"}
 
-If you prefer to add the files seperated by classes you can download the \href{https://github.com/n0dex/cppjsonlib/tree/master/json_library_source}{\tt json\+\_\+library} directory and include the directory into your project. To use the library in this case, you should use {\ttfamily \#include \char`\"{}json\+\_\+library\+\_\+source/json\+\_\+library.\+h\char`\"{}}.
+\textcolor{comment}{// for convenience}
+\textcolor{keyword}{using namespace }json;
 
-\subsubsection*{\label{_doc_section}%
+\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int}, \textcolor{keywordtype}{char} *[]) \{
+    ...
+\}
+\end{DoxyCode}
+
+
+If you prefer to add the files seperated by classes you can download the \href{https://github.com/n0dex/cppjsonlib/tree/master/json_library_source}{\tt json\+\_\+library} directory and include the directory into your project. In this case the following include should be used\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "json\_library\_source/json\_library.h"}
+\end{DoxyCode}
+ \subsubsection*{\label{_doc_section}%
 Documentation}
 
 The library is documented with doxygen. The documentation can be found \href{https://github.com/n0dex/cppjsonlib/tree/master/json_library_documentation}{\tt here}. To use the documentation open \href{https://github.com/n0dex/cppjsonlib/blob/master/json_library_documentation/html/index.html}{\tt html/index.\+html} in a browser.
@@ -61,148 +76,141 @@ Examples}
 
 The following examples will show how to work with the library.
 
-\paragraph*{\label{_parsing_json_string_section}%
-Parsing a J\+S\+ON string}
+\paragraph*{\label{_convert_a_string_to_json_section}%
+Converting a string into a json\+\_\+variant}
 
 
 \begin{DoxyCode}
-\textcolor{comment}{// include library}
-\textcolor{preprocessor}{#include "json\_library.h"}
+json\_variant json;
 
-\textcolor{comment}{// for convenience}
-\textcolor{keyword}{using namespace }json;
+\textcolor{comment}{// intializing a json\_variant from a string}
+json = json\_variant::parse(\textcolor{stringliteral}{"\{"} 
+    \textcolor{stringliteral}{"\(\backslash\)"name\(\backslash\)": \(\backslash\)"user\(\backslash\)", "}
+    \textcolor{stringliteral}{"\(\backslash\)"age\(\backslash\)": 22, "}
+    \textcolor{stringliteral}{"\(\backslash\)"favourite\_values\(\backslash\)": ["}
+        \textcolor{stringliteral}{"2,"}
+        \textcolor{stringliteral}{"null,"}
+        \textcolor{stringliteral}{"false,"}
+        \textcolor{stringliteral}{"\{\}"}
+    \textcolor{stringliteral}{"] "}
+\textcolor{stringliteral}{"\}"});
 
-\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int}, \textcolor{keywordtype}{char} *[]) \{
-
-    \textcolor{comment}{// initializing a string}
-    std::string string\_value = \textcolor{stringliteral}{"\{ }
-\textcolor{stringliteral}{        \(\backslash\)"name\(\backslash\)": \(\backslash\)"user\(\backslash\)", }
-\textcolor{stringliteral}{        \(\backslash\)"age\(\backslash\)": 22, }
-\textcolor{stringliteral}{        \(\backslash\)"favourite\_values\(\backslash\)": [ 2, null, false, \{\}] }
-\textcolor{stringliteral}{    \}"};
-
-    \textcolor{comment}{// initializing a string with an easier writing - content same as above}
-    string\_value = R\textcolor{stringliteral}{"(\{}
-\textcolor{stringliteral}{        "name": "user",}
-\textcolor{stringliteral}{        "age": 22,}
-\textcolor{stringliteral}{        "favourite\_values": [2, null, false, \{\}]}
-\textcolor{stringliteral}{    \})";}
+\textcolor{comment}{// intializing a json\_variant from a string with more convenient writing}
+json = json\_variant::parse(R\textcolor{stringliteral}{"(\{}
+\textcolor{stringliteral}{    "name": "user",}
+\textcolor{stringliteral}{    "age": 22,}
+\textcolor{stringliteral}{    "favourite\_values": [}
+\textcolor{stringliteral}{        2,}
+\textcolor{stringliteral}{        null,}
+\textcolor{stringliteral}{        false,}
+\textcolor{stringliteral}{        \{\}}
+\textcolor{stringliteral}{    ]}
+\textcolor{stringliteral}{\})");}
 \textcolor{stringliteral}{}
-\textcolor{stringliteral}{    }\textcolor{comment}{// parse string}
-    json\_variant json = json\_variant::parse(string\_value);
-
-    \textcolor{comment}{// print json into console}
-
-    \textcolor{comment}{// prints the json with default indent of 4}
-    std::cout << json << std::endl;
-    \textcolor{comment}{// prints the json with indent of 2    }
-    std::cout << json.dump(2) << std::endl;     
-    \textcolor{comment}{// prints the json no indent and no new lines: }
-    \textcolor{comment}{// "\{"age":22,"favourite\_values":[2,null,false,\{\}],"name":"user"\}"}
-    std::cout << json.dump(0) << std::endl;     
-
-    \textcolor{comment}{// prints "1" because the source string is valid json and was successfully parsed}
-    std::cout << json.is\_valid\_json() << std::endl; 
-    \textcolor{comment}{// prints "0" because the root is an object and not an array}
-    std::cout << json.is\_array() << std::endl;     
-
-    \textcolor{keywordflow}{if} (json.is\_object()) \{
-        \textcolor{comment}{// prints "user"}
-        std::cout << json.to\_object()[\textcolor{stringliteral}{"name"}].to\_string() << std::endl;                 
-
-        json\_object &obj = json.to\_object();
-
-        \textcolor{comment}{// prints "1" since the json array holds a "false" bool value in index 2}
-        std::cout << obj.at(\textcolor{stringliteral}{"favourite\_values"}).to\_array()[2].is\_bool() << std::endl;   
-
-        \textcolor{comment}{// prints "[2,null,false,\{\}]"}
-        std::cout << obj.at(\textcolor{stringliteral}{"favourite\_values"}).dump(0) << std::endl;                  
-    \}
-
-    \textcolor{keywordflow}{return} 0;
+\textcolor{stringliteral}{}\textcolor{keywordflow}{if} (json.is\_valid\_json()) \{
+    \textcolor{comment}{// do something with json}
 \}
+\textcolor{keywordflow}{else} \{        
+    std::cout << \textcolor{stringliteral}{"The string isn't in valid JSON syntax."};
+\}
+\end{DoxyCode}
+
+
+\paragraph*{\label{_convert_a_json_to_string_section}%
+Converting a json\+\_\+variant into a string}
+
+
+\begin{DoxyCode}
+json\_variant json = json\_variant::parse(...);
+std::string str;
+
+\textcolor{comment}{// convert the json\_variant into a string with the default indent of 4 spaces}
+str = json.dump();
+\textcolor{comment}{// convert the json\_variant into a string with a indent of 2 spaces}
+str = json.dump(2);
+\textcolor{comment}{// convert the json\_variant into a string with no indent and no new lines}
+str = json.dump(0);
+
+\textcolor{comment}{// converting and writing the json\_variant into std::ostream directly is also possible}
+std::cout << json << std::endl;
 \end{DoxyCode}
 
 
 \paragraph*{\label{_opening_changing_section}%
 Opening, changing and saving a J\+S\+ON file}
 
-
+This example assumes that there is a file called {\ttfamily values.\+json} saved on the hard drive with the following content\+: 
 \begin{DoxyCode}
-\textcolor{comment}{// include library}
-\textcolor{preprocessor}{#include "json\_library.h"}
+\{
+    "age": 22,
+    "favourite\_values": [
+        2,
+        null,
+        false,
+        \{
 
-\textcolor{comment}{// for convenience}
-\textcolor{keyword}{using namespace }json;
-
-\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int}, \textcolor{keywordtype}{char} *[]) \{
-    \textcolor{comment}{/*}
-\textcolor{comment}{    example assumes "values.json" is a text file that contains the following json object:}
-\textcolor{comment}{    \{}
-\textcolor{comment}{        "name": "user",}
-\textcolor{comment}{        "age": 22,}
-\textcolor{comment}{        "favourite\_values": [2, null, false, \{\}]}
-\textcolor{comment}{    \}}
-\textcolor{comment}{    */}
-    json\_document doc(\textcolor{stringliteral}{"values.json"});
-
-    \textcolor{comment}{// only successfull if document contains valid json syntax and the file was found}
-    \textcolor{keywordflow}{if} (doc.open()) \{ 
-        std::cout << doc.json() << std::endl;
-        \textcolor{comment}{/*}
-\textcolor{comment}{        prints:}
-\textcolor{comment}{        \{}
-\textcolor{comment}{            "age": 22,}
-\textcolor{comment}{            "favourite\_values": [}
-\textcolor{comment}{                2,}
-\textcolor{comment}{                null,}
-\textcolor{comment}{                false,}
-\textcolor{comment}{                \{}
-\textcolor{comment}{}
-\textcolor{comment}{                \}}
-\textcolor{comment}{            ],}
-\textcolor{comment}{            "name": "user"}
-\textcolor{comment}{        \}}
-\textcolor{comment}{        */}
-
-        \textcolor{comment}{// add a new subvalue in "favourite\_values" and change the "age":}
-
-        \textcolor{comment}{// note that the reference symbol is important if }
-        \textcolor{comment}{// you want to change the document source.}
-        json\_variant &var = doc.json();
-        json\_object &obj = var.to\_object();
-        obj.at(\textcolor{stringliteral}{"age"}) = 44;
-        json\_array &arr = obj[\textcolor{stringliteral}{"favourite\_values"}].to\_array();
-        json\_object &obj2 = arr[3].to\_object();
-        obj2.insert(\{\textcolor{stringliteral}{"favourite sub value"}, -11\});
-
-        std::cout << doc.json() << std::endl;
-        \textcolor{comment}{/*}
-\textcolor{comment}{        prints:}
-\textcolor{comment}{        \{}
-\textcolor{comment}{            "age": 44,}
-\textcolor{comment}{            "favourite\_values": [}
-\textcolor{comment}{                2,}
-\textcolor{comment}{                null,}
-\textcolor{comment}{                false,}
-\textcolor{comment}{                \{}
-\textcolor{comment}{                    "favourite sub value": -11}
-\textcolor{comment}{                \}}
-\textcolor{comment}{            ],}
-\textcolor{comment}{            "name": "user"}
-\textcolor{comment}{        \}}
-\textcolor{comment}{        */}
-
-        \textcolor{comment}{// only successfull if document only contains valid json\_variants}
-        \textcolor{comment}{// (variants with values) and the filename is valid}
-        \textcolor{keywordflow}{if} (doc.save()) \{ 
-            std::cout << \textcolor{stringliteral}{"document saved!"} << std::endl;
-
-            doc.close(); \textcolor{comment}{// optional}
         \}
+    ],
+    "name": "user"
+\}
+\end{DoxyCode}
+ {\ttfamily json\+\_\+document} provides simple J\+S\+ON I/O access\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// define json document used for I/O operations}
+json\_document doc(\textcolor{stringliteral}{"values.json"});
+
+\textcolor{comment}{// read and parse the file content}
+\textcolor{keywordtype}{bool} ok = doc.open();
+
+\textcolor{comment}{// only successfull if document contains valid }
+\textcolor{comment}{// json syntax and the file was found}
+\textcolor{keywordflow}{if} (ok) \{
+    \textcolor{comment}{// print the content}
+    std::cout << doc.json() << std::endl;
+
+    \textcolor{comment}{// add a new subvalue in "favourite\_values" and change the "age":}
+
+    \textcolor{comment}{// note that the reference symbol is important if }
+    \textcolor{comment}{// you want to change the document source.}
+    json\_variant &var = doc.json();
+    json\_object &obj = var.to\_object();
+
+    \textcolor{comment}{// change the value of age}
+    obj.at(\textcolor{stringliteral}{"age"}) = 44;
+
+    \textcolor{comment}{// add a new value in "favourite\_values" }
+    json\_array &arr = obj[\textcolor{stringliteral}{"favourite\_values"}].to\_array();
+    json\_object &obj2 = arr[3].to\_object();
+    obj2.insert(\{\textcolor{stringliteral}{"favourite sub value"}, -11\});
+
+    \textcolor{comment}{// save the changes into the file}
+    ok = doc.save();
+
+    \textcolor{comment}{// only successfull if document only contains valid json\_variants}
+    \textcolor{comment}{// (variants with values) and the filename is valid}
+    \textcolor{keywordflow}{if} (ok) \{ 
+        std::cout << \textcolor{stringliteral}{"document successfully saved."} << std::endl;
     \}
 
-    \textcolor{keywordflow}{return} 0;
+    \textcolor{comment}{// optional}
+    doc.close(); 
+\}
+\end{DoxyCode}
+
+
+After running the code the file content will look like this\+: 
+\begin{DoxyCode}
+\{
+    "age": 44,
+    "favourite\_values": [
+        2,
+        null,
+        false,
+        \{
+            "favourite sub value": -11
+        \}
+    ],
+    "name": "user"
 \}
 \end{DoxyCode}
 
@@ -222,7 +230,7 @@ std::cout << var.is\_invalid\_json() << std::endl;
 var = json\_variant::null;
 \textcolor{comment}{// NOTE: to initalize a json\_variant with null you }
 \textcolor{comment}{// have to use json\_variant::null, using for expample }
-\textcolor{comment}{// nullptr will NOT WORK.}
+\textcolor{comment}{// nullptr will not work}
 
 \textcolor{comment}{// will print "0"}
 std::cout << var.is\_invalid\_json() << std::endl;
@@ -250,7 +258,7 @@ var = \textcolor{stringliteral}{"string value"};
 \paragraph*{\label{_working_with_json_array_section}%
 Working with json\+\_\+array}
 
-Keep in mind that a {\ttfamily json\+\_\+array} is just a {\ttfamily typedef} for {\ttfamily std\+::vector$<$json\+\_\+variant$>$} so all {\ttfamily std\+::vector} functions work on {\ttfamily json\+\_\+array} as well.
+Keep in mind that a {\ttfamily json\+\_\+array} is just a {\ttfamily typedef} of {\ttfamily std\+::vector$<$json\+\_\+variant$>$} so all {\ttfamily std\+::vector} functions work on {\ttfamily json\+\_\+array} as well.
 
 
 \begin{DoxyCode}
@@ -288,7 +296,7 @@ arr[0] = 567;
 \paragraph*{\label{_working_with_json_object_section}%
 Working with json\+\_\+object}
 
-Keep in mind that a {\ttfamily json\+\_\+object} is just a {\ttfamily typedef} for {\ttfamily std\+::map$<$std\+::string, json\+\_\+variant$>$} so all {\ttfamily std\+::map} functions work on {\ttfamily json\+\_\+object} as well.
+Keep in mind that a {\ttfamily json\+\_\+object} is just a {\ttfamily typedef} of {\ttfamily std\+::map$<$std\+::string, json\+\_\+variant$>$} so all {\ttfamily std\+::map} functions work on {\ttfamily json\+\_\+object} as well.
 
 
 \begin{DoxyCode}
@@ -326,7 +334,7 @@ obj.insert(\{\textcolor{stringliteral}{"property 5"}, -100\});
 \paragraph*{\label{_typecast_exceptions_section}%
 Typecast exceptions}
 
-Everytime a {\ttfamily json\+\_\+variant\+::to\+\_\+$\ast$type$\ast$()} ({\ttfamily to\+\_\+int()}, {\ttfamily to\+\_\+string()}, ...) gets called the json\+\_\+variant will try to cast the underlying value to the requested value. If the actuall value isn\textquotesingle{}t the requested value a {\ttfamily std\+::runtime\+\_\+error} will be thrown. To avoid handling exceptions you have to check whether the underlying value is actually the requested type. You can do so by using {\ttfamily is\+\_\+$\ast$type$\ast$()} ({\ttfamily is\+\_\+int()}, {\ttfamily is\+\_\+string()}, ...)
+Everytime a {\ttfamily json\+\_\+variant\+::to\+\_\+$\ast$type$\ast$()} ({\ttfamily to\+\_\+int()}, {\ttfamily to\+\_\+string()}, ...) gets called the {\ttfamily json\+\_\+variant} will try to cast the underlying value to the requested value. If the actuall value isn\textquotesingle{}t the requested value a {\ttfamily std\+::runtime\+\_\+error} will be thrown. To avoid handling exceptions you have to check whether the underlying value is actually the requested type. You can do so by using {\ttfamily is\+\_\+$\ast$type$\ast$()} ({\ttfamily is\+\_\+int()}, {\ttfamily is\+\_\+string()}, ...)
 
 \subparagraph*{\label{_handling_typecast_expception_section}%
 Handling typecast a exception}
@@ -367,23 +375,22 @@ json\_variant var = 234;
 \paragraph*{\label{_json_and_string_escapes_section}%
 J\+S\+ON and string escapes}
 
-All strings in a {\ttfamily json\+\_\+variant} and its children will be unicode escaped before being converted to a string (for example when calling {\ttfamily json\+\_\+variant\+::dump()}). However only the characters " and \textbackslash{} will be escaped since those are the only illegal characters in a J\+S\+ON string. json\+\_\+variant\+::unescape\+\_\+string() is able unescape A\+S\+C\+I\+I-\/characters (other escaped characters will stay escaped).
+All strings in a {\ttfamily json\+\_\+variant} and its children will be unicode escaped before being converted to a string (for example when calling {\ttfamily json\+\_\+variant\+::dump()}). However only the characters " and \textbackslash{} will be escaped since those are the only illegal characters in a J\+S\+ON string. {\ttfamily json\+\_\+variant\+::unescape\+\_\+string()} is able unescape A\+S\+C\+I\+I-\/characters (other escaped characters will stay escaped).
 
 
 \begin{DoxyCode}
-json\_variant var = R\textcolor{stringliteral}{"(raw json string \(\backslash\)u3093with \(\backslash\)" very \(\backslash\) }
-\textcolor{stringliteral}{                      illegal / \(\backslash\)\(\backslash\) \(\backslash\)t "" characters")";}
+\textcolor{comment}{// same string content}
+std::string unescaped = R\textcolor{stringliteral}{"("name",\(\backslash\)t user\(\backslash\)u3093\(\backslash\)n)";}
+\textcolor{stringliteral}{std::string escaped   = R}\textcolor{stringliteral}{"("\(\backslash\)u0022name\(\backslash\)u0022,\(\backslash\)u005ct user\(\backslash\)u005cu3093\(\backslash\)u005cn")";}
 \textcolor{stringliteral}{}
-\textcolor{stringliteral}{std::string escaped = R}\textcolor{stringliteral}{"("raw json string \(\backslash\)u005cu3093with \(\backslash\)u005c\(\backslash\)u0022 very }
-\textcolor{stringliteral}{                          \(\backslash\)u005c illegal / \(\backslash\)u005c\(\backslash\)u005c \(\backslash\)u005ct \(\backslash\)u0022\(\backslash\)u0022 }
-\textcolor{stringliteral}{                          characters\(\backslash\)u0022")";}
-\textcolor{stringliteral}{}
-\textcolor{stringliteral}{std::cout << var << std::endl;}
-\textcolor{stringliteral}{}\textcolor{comment}{// prints: "raw json string \(\backslash\)u005cu3093with \(\backslash\)u005c\(\backslash\)u0022 very \(\backslash\)u005c illegal }
-\textcolor{comment}{//          / \(\backslash\)u005c\(\backslash\)u005c \(\backslash\)u005ct \(\backslash\)u0022\(\backslash\)u0022 characters\(\backslash\)u0022"}
+\textcolor{stringliteral}{}\textcolor{comment}{// initializes json\_variant with string that contains illegal json characters}
+json\_variant var = unescaped;
+
+std::cout << var << std::endl;
+\textcolor{comment}{// prints: '\(\backslash\)u0022name\(\backslash\)u0022,\(\backslash\)u005ct user\(\backslash\)u005cu3093\(\backslash\)u005cn'}
 
 std::cout << json\_variant::unescape\_string(escaped) << std::endl;
-\textcolor{comment}{// prints: "raw json string \(\backslash\)u3093with \(\backslash\)" very \(\backslash\) illegal / \(\backslash\)\(\backslash\) \(\backslash\)t "" characters""}
+\textcolor{comment}{// prints: '"name",\(\backslash\)t user\(\backslash\)u3093\(\backslash\)n'}
 \end{DoxyCode}
 
 

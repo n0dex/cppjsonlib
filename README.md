@@ -113,7 +113,7 @@ std::string str;
 
 // convert the json_variant into a string with the default indent of 4 spaces
 str = json.dump();
-// convert the json_variant into a string with a indent of 2 spaces
+// convert the json_variant into a string with an indent of 2 spaces
 str = json.dump(2);
 // convert the json_variant into a string with no indent and no new lines
 str = json.dump(0);
@@ -151,8 +151,6 @@ bool ok = doc.open();
 if (ok) {
     // print the content
     std::cout << doc.json() << std::endl;
-
-    // add a new subvalue in "favourite_values" and change the "age":
 
     // note that the reference symbol is important if 
     // you want to change the document source.
